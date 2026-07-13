@@ -334,7 +334,7 @@ footer .fmeta a:hover{color:var(--ivory)}
       <a href="#practice">업무분야</a>
       <a href="#people">구성원</a>
       <a href="#column">칼럼</a>
-      <a href="#contact">오시는 길</a>
+      <a href="#" data-cv="access">오시는 길</a>\
       <a href="#contact">상담 문의</a>
     </nav>
     <button class="nav-toggle" id="toggle" aria-label="메뉴 열기" aria-expanded="false">
@@ -583,7 +583,64 @@ footer .fmeta a:hover{color:var(--ivory)}
     </div>
   </div>
 </footer>
+<!-- ================= ACCESS MODAL ================= -->
+<style>
+.sheet.sheet-access{grid-template-columns:1fr;width:min(560px,100%)}
+.acc-map{height:150px;background:var(--ivory-soft);border-bottom:1px solid var(--hair)}
+.acc-map iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(.35)}
+.acc-body{padding:clamp(1.6rem,3vw,1.9rem)}
+.acc-addr{font-size:.9rem;color:var(--slate);line-height:1.7;margin:.4rem 0 1.5rem}
+.acc-row{display:flex;gap:1rem;padding:.7rem 0;border-top:1px solid var(--hair)}
+.acc-row:first-of-type{border-top:1px solid rgba(0,0,0,.1)}
+.acc-k{min-width:64px;font-size:.68rem;letter-spacing:.1em;color:var(--slate-soft);padding-top:3px}
+.acc-v{font-size:.87rem;line-height:1.65}
+.acc-v small{display:block;color:var(--mist);font-size:.78rem;margin-top:.15rem}
+.acc-btns{display:flex;gap:.6rem;margin-top:1.6rem;flex-wrap:wrap}
+.acc-btns button,.acc-btns a{font:inherit;font-size:.8rem;color:var(--navy);background:none;
+  border:1px solid rgba(17,26,46,.35);padding:.55rem 1rem;cursor:pointer;text-decoration:none;
+  transition:background .2s}
+.acc-btns button:hover,.acc-btns a:hover{background:rgba(17,26,46,.06)}
+</style>
 
+<div class="modal" id="access" role="dialog" aria-modal="true" aria-labelledby="acc-title" aria-hidden="true">
+  <div class="modal-back" data-close></div>
+  <div class="sheet sheet-access">
+    <button class="sheet-close" data-close aria-label="닫기">✕</button>
+    <div class="acc-map">
+      <iframe src="https://www.google.com/maps?q=37.520317,126.928476&hl=ko&z=17&output=embed"
+              loading="lazy" title="비온 특허법률사무소 위치"></iframe>
+    </div>
+    <div class="acc-body">
+      <div class="s-role">Access</div>
+      <h2 class="s-name" id="acc-title" style="font-size:1.5rem">오시는 길</h2>
+      <div class="acc-addr">
+        서울특별시 영등포구 국제금융로8길 25<br>주택건설회관 6층 630호
+      </div>
+
+      <div class="acc-row">
+        <div class="acc-k">주차</div>
+        <div class="acc-v">건물 내 주차는 제공되지 않습니다<small>인근 공영주차장을 이용해 주세요</small></div>
+      </div>
+      <div class="acc-row">
+        <div class="acc-k">문의</div>
+        <div class="acc-v"><a href="tel:+82269520304">02-6952-0304</a></div>
+      </div>
+
+      <div class="acc-btns">
+        <a href="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%20%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC%20%EA%B5%AD%EC%A0%9C%EA%B8%88%EC%9C%B5%EB%A1%9C8%EA%B8%B8%2025" target="_blank" rel="noopener">네이버 지도에서 보기</a>
+        <button id="copyAddr">주소 복사</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('copyAddr')?.addEventListener('click',e=>{
+  navigator.clipboard.writeText('서울특별시 영등포구 국제금융로8길 25 주택건설회관 6층 630호');
+  e.target.textContent='복사됨';
+  setTimeout(()=>e.target.textContent='주소 복사',1500);
+});
+</script>
 <!-- ================= CV MODALS ================= -->
 <div class="modal" id="cv-hs" role="dialog" aria-modal="true" aria-labelledby="cv-hs-name" aria-hidden="true">
   <div class="modal-back" data-close></div>
@@ -707,8 +764,8 @@ function closeModal(m){
   document.body.style.overflow='';
   if(lastFocus)lastFocus.focus();
 }
-document.querySelectorAll('.detail-btn').forEach(b=>
-  b.addEventListener('click',()=>openModal(b.dataset.cv)));
+document.querySelectorAll('[data-cv]').forEach(b=>
+  b.addEventListener('click',e=>{e.preventDefault();openModal(b.dataset.cv);}));
 document.querySelectorAll('.modal').forEach(m=>{
   m.querySelectorAll('[data-close]').forEach(el=>el.addEventListener('click',()=>closeModal(m)));
 });
