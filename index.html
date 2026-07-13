@@ -86,7 +86,11 @@ header.nav{
 header.nav.scrolled{border-bottom-color:var(--hair)}
 .nav-inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);
   height:74px;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:baseline;gap:.6rem;font-weight:600}
+.brand{display:flex;align-items:center;gap:0;font-weight:600;flex-shrink:0}
+.brand-logo{
+  display:block;width:clamp(126px,11.5vw,150px);height:auto;
+  background:transparent;
+}
 .brand .kr{font-family:var(--sans-kr);font-weight:700;font-size:1.3rem;letter-spacing:-.01em}
 .brand .lt{font-family:var(--serif-lt);font-size:1.05rem;letter-spacing:.14em;
   color:var(--slate);font-style:italic;font-weight:500}
@@ -300,6 +304,11 @@ nav.links a:hover::after{width:100%}
 /* ---- footer ---- */
 footer{background:var(--navy-deep);color:var(--ivory);padding:clamp(3rem,6vw,4.5rem) 0 2.4rem}
 footer .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap}
+.footer-logo-link{display:inline-block;line-height:0}
+.footer-logo{
+  display:block;width:clamp(190px,19vw,240px);height:auto;
+  background:transparent;
+}
 footer .fbrand .kr{font-family:var(--sans-kr);font-weight:700;font-size:1.5rem}
 footer .fbrand .lt{font-family:var(--serif-lt);font-style:italic;color:var(--mist);letter-spacing:.14em;margin-left:.5rem}
 footer .fbrand p{margin:.8rem 0 0;color:rgba(248,244,236,.5);font-size:.85rem;max-width:24rem}
@@ -336,6 +345,8 @@ footer .fmeta a:hover{color:var(--ivory)}
 @media(max-width:520px){
   .practice-grid{grid-template-columns:1fr}
   .hero .lead{font-size:1rem}
+  .brand-logo{width:124px}
+  .footer-logo{width:190px}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;scroll-behavior:auto}
@@ -349,7 +360,8 @@ footer .fmeta a:hover{color:var(--ivory)}
 <header class="nav" id="nav">
   <div class="nav-inner">
     <a class="brand" href="#top" aria-label="비온 특허법률사무소 홈">
-      <span class="kr">비온</span><span class="dot"></span><span class="beon" style="font-size:1.06rem">Be<span class="on">ON</span></span>
+      <img class="brand-logo" src="./beon-logo-header.png"
+           alt="비온 특허법률사무소 BeON" width="879" height="379" />
     </a>
     <nav class="links" id="menu">
       <a href="#about">소개</a>
@@ -599,7 +611,10 @@ footer .fmeta a:hover{color:var(--ivory)}
 <footer>
   <div class="wrap">
     <div class="fbrand">
-      <div><span class="kr">비온</span><span class="beon on-dark" style="font-size:1.5rem;margin-left:.5rem">Be<span class="on">ON</span></span></div>
+      <a href="#top" class="footer-logo-link" aria-label="비온 특허법률사무소 홈으로 이동">
+        <img class="footer-logo" src="./beon-logo-footer.png"
+             alt="비온 특허법률사무소 BeON" width="879" height="379" />
+      </a>
       <p>당신 곁에서 함께 하겠습니다. <span class="beon on-dark">Be<span class="on">ON</span></span>, 비온 — 복잡한 기술을 명확한 권리로 옮기는 특허법률사무소.</p>
     </div>
     <div class="fmeta">
