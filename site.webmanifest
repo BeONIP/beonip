@@ -1,0 +1,20 @@
+{
+  "name": "비온 특허법률사무소",
+  "short_name": "BeON",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#F8F4EC",
+  "theme_color": "#F8F4EC",
+  "icons": [
+    {
+      "src": "favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
