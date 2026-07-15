@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>와디즈 먼저 열었습니다, 특허는 늦은 걸까요? | 비온 특허법률사무소</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Noto+Serif+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root {
+    --navy: #16233D;
+    --navy-deep: #111A2E;
+    --navy-tint: #F1ECE1;
+    --ivory: #F8F4EC;
+    --ivory-lift: #FDFBF6;
+    --ivory-soft: #F1ECE1;
+    --line: #E4DDD0;
+    --text: #111A2E;
+    --muted: #5B6472;
+    --caption: #918E85;
+    --accent: #7C93A6;
+    --serif-kr: 'Noto Serif KR', serif;
+    --sans: 'Pretendard', 'Pretendard Variable', system-ui, -apple-system, 'Apple SD Gothic Neo', sans-serif;
+    --mont: 'Montserrat', 'Pretendard', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ivory);
+    font-family: var(--sans);
+    color: var(--text);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--ivory-lift);
+    padding: 0 0 80px;
+  }
+
+  /* Header */
+  header.masthead {
+    border-top: 4px solid var(--navy);
+    padding: 46px 56px 34px;
+    border-bottom: 1px solid var(--line);
+  }
+  
+  /* Logo & Eyebrow */
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: var(--caption);
+    font-family: var(--mont);
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .logo-text {
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0;
+    margin-right: 8px;
+  }
+  .logo-text .be { color: #1B365D; }
+  .logo-text .on { color: #677A8B; }
+  .eyebrow-text { padding-top: 2px; }
+
+  h1 {
+    font-family: var(--serif-kr);
+    font-size: 32px;
+    line-height: 1.42;
+    font-weight: 400;
+    color: var(--navy-deep);
+    margin: 0 0 18px;
+    letter-spacing: -0.02em;
+  }
+  .deck {
+    font-size: 16px;
+    color: var(--muted);
+    font-weight: 400;
+    margin: 0;
+  }
+  .byline {
+    margin-top: 26px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .byline strong { color: var(--navy); font-weight: 500; }
+
+  main { padding: 44px 56px 0; }
+
+  h2 {
+    font-family: var(--serif-kr);
+    font-size: 21px;
+    color: var(--navy-deep);
+    font-weight: 500;
+    margin: 54px 0 20px;
+    padding-left: 14px;
+    border-left: 4px solid var(--navy);
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-family: var(--serif-kr);
+    font-size: 16px;
+    color: var(--navy);
+    font-weight: 700;
+    margin: 32px 0 10px;
+  }
+  p { margin: 0 0 18px; font-size: 15.5px; font-weight: 400; }
+  strong { font-weight: 600; color: var(--navy-deep); }
+
+  /* Opening quotes */
+  .voices {
+    background: var(--navy-tint);
+    border-radius: 4px;
+    padding: 26px 30px;
+    margin: 0 0 30px;
+  }
+  .voices p {
+    margin: 0 0 12px;
+    font-size: 15.5px;
+    color: var(--navy-deep);
+    font-weight: 400;
+    padding-left: 18px;
+    position: relative;
+  }
+  .voices p:last-child { margin-bottom: 0; }
+  .voices p::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 12px;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  /* Pull callout */
+  .pull {
+    margin: 34px 0;
+    padding: 22px 26px;
+    border-left: 3px solid var(--accent);
+    background: var(--ivory-soft);
+    font-size: 16.5px;
+    font-weight: 500;
+    color: var(--navy-deep);
+    line-height: 1.7;
+  }
+
+  /* Warning box */
+  .warn {
+    margin: 30px 0;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .warn-h {
+    background: var(--navy);
+    color: var(--ivory);
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .warn-b { padding: 20px 24px; }
+  .warn-b p:last-child { margin-bottom: 0; }
+
+  /* Case study */
+  .case {
+    margin: 28px 0;
+    padding: 24px 26px;
+    background: var(--ivory);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+  }
+  .case-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-family: var(--mont);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--ivory);
+    background: var(--navy);
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-bottom: 14px;
+  }
+  .case p { margin-bottom: 12px; }
+  .case p:last-child { margin-bottom: 0; }
+  .case-take {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--line);
+    font-size: 14.5px;
+    color: var(--navy-deep);
+    font-weight: 500;
+  }
+
+  /* Table */
+  .tbl-cap {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 30px 0 10px;
+    font-weight: 500;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 12px;
+    font-size: 14px;
+  }
+  thead th {
+    background: var(--navy);
+    color: var(--ivory);
+    font-weight: 500;
+    padding: 12px 14px;
+    text-align: left;
+    font-size: 13.5px;
+  }
+  tbody td {
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+    font-weight: 400;
+  }
+  tbody tr:nth-child(even) { background: var(--ivory); }
+  tbody td:first-child {
+    font-weight: 500;
+    color: var(--navy-deep);
+    white-space: nowrap;
+  }
+  .tbl-note {
+    font-size: 12.5px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  /* Checklist */
+  .steps {
+    counter-reset: s;
+    list-style: none;
+    padding: 0;
+    margin: 26px 0;
+  }
+  .steps li {
+    counter-increment: s;
+    position: relative;
+    padding: 0 0 20px 46px;
+    font-size: 15.5px;
+    font-weight: 400;
+  }
+  .steps li::before {
+    content: counter(s);
+    position: absolute;
+    left: 0; top: 2px;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--ivory);
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .steps li b {
+    display: block;
+    color: var(--navy-deep);
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  /* Closing */
+  .close {
+    margin-top: 50px;
+    padding: 30px 32px;
+    background: var(--navy);
+    border-radius: 4px;
+    color: var(--ivory);
+  }
+  .close h3 {
+    color: var(--ivory);
+    margin: 0 0 12px;
+    font-size: 17px;
+  }
+  .close p {
+    color: var(--ivory-soft);
+    font-size: 14.5px;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+  .close .firm {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(248,244,236,0.18);
+    font-size: 13px;
+    color: var(--accent);
+  }
+  .close .firm b { color: var(--ivory); font-weight: 500; }
+
+  .disclaimer {
+    margin-top: 26px;
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 640px) {
+    header.masthead { padding: 34px 22px 26px; }
+    main { padding: 32px 22px 0; }
+    h1 { font-size: 24px; }
+    h2 { font-size: 18.5px; }
+    table { font-size: 13px; }
+    tbody td:first-child { white-space: normal; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <div class="logo-text"><span class="be">Be</span><span class="on">ON</span></div>
+    <div class="eyebrow-text">IP COLUMN &nbsp;|&nbsp; 01</div>
+  </div>
+  <h1>와디즈 먼저 열었습니다,<br>특허는 늦은 걸까요?</h1>
+  <p class="deck">이미 공개한 기술도 특허가 될 수 있습니다. 다만 언제, 어디에, 어디까지 공개했는지에 따라 답이 완전히 달라집니다.</p>
+  <div class="byline"><strong>비온 특허법률사무소</strong> &nbsp;·&nbsp; BeON Patent &amp; Law Firm</div>
+</header>
+
+<main>
+
+<div class="voices">
+  <p>“와디즈 펀딩부터 열었는데 특허출원을 안 했습니다.”</p>
+  <p>“유튜브에 시제품 영상을 올리고 나서야 특허가 생각났습니다.”</p>
+  <p>“IR 피칭에서 기술 구조를 설명했는데 문제가 될까요?”</p>
+</div>
+
+<p>스타트업은 제품을 알리고 투자자를 만나기 위해 기술을 먼저 보여줘야 할 때가 많습니다. 그런데 특허는 원칙적으로 <strong>외부에 공개하기 전에 출원</strong>하는 것이 가장 안전합니다. 제품의 구조나 작동 원리가 크라우드펀딩 페이지, 유튜브, SNS, 박람회 등을 통해 불특정 다수에게 공개됐다면, 특허에 필요한 ‘새로움(신규성)’을 잃었다고 판단될 수 있기 때문입니다.</p>
+
+<p>여기서 많은 분들이 되묻습니다. <strong>“제가 만든 기술을 제가 공개한 것도 문제가 되나요?”</strong> 됩니다. 특허법이 보는 것은 ‘누가 공개했는지’가 아니라 <strong>‘출원 전에 일반인이 그 기술을 알 수 있는 상태였는지’</strong>입니다. 내 발명이라도, 내 손으로 세상에 내놓은 순간 나에게 불리한 자료가 될 수 있습니다.</p>
+
+<p>그렇다면 이미 공개한 분들은 이 글을 여기서 닫아야 할까요. 그렇지 않습니다.</p>
+
+<h2>공개했더라도 아직 늦지 않았을 수 있습니다</h2>
+
+<p>우리 특허법에는 발명자가 자신의 기술을 먼저 공개한 경우에도, 일정한 요건을 갖추면 그 공개 때문에 특허를 받지 못하는 일을 막아주는 제도가 있습니다. <strong>‘공지예외주장’</strong>이라고 부릅니다. 쉽게 말하면 <strong>공개했더라도 일정 기간 안에 다시 한 번 기회를 주는 제도</strong>입니다.</p>
+
+<div class="pull">
+  자신의 발명을 공개한 날부터 <b>12개월 이내</b>에 특허를 출원하고 필요한 절차를 밟으면, 심사에서 그 공개를 신규성·진보성을 부정하는 자료로 보지 않도록 할 수 있습니다.
+</div>
+
+<p>다만 ‘필요한 절차’가 생각보다 까다롭습니다. 원칙적으로 <strong>출원서에 공지예외를 주장한다는 취지를 기재</strong>해야 하고, <strong>출원일부터 30일 이내에 공개 사실을 증명하는 서류를 제출</strong>해야 합니다. 다만 한국은 출원 시 이를 누락했더라도 보완수수료를 납부하면, 명세서 등을 보정할 수 있는 기간 또는 특허결정 후 설정등록 전의 일정 기간에 주장 취지나 증명서류를 보완할 수 있습니다. 그렇다고 출원만 해두고 아무 때나 챙길 수 있다는 뜻은 아닙니다. 공개 시점과 공개 내용을 증명할 자료는 미리 확보해 두는 것이 안전합니다.</p>
+
+<h2>‘1년 안이면 괜찮다’는 뜻은 아닙니다</h2>
+
+<p>공지예외주장은 공개 전 출원을 완전히 대신하는 만능 해결책이 아닙니다. 가장 큰 오해가 여기서 나옵니다.</p>
+
+<div class="warn">
+  <div class="warn-h">꼭 알아두셔야 할 점 — 출원일은 공개일로 소급되지 않습니다</div>
+  <div class="warn-b">
+    <p>공지예외가 인정되더라도 <strong>출원일 자체가 공개한 날로 앞당겨지는 것은 아닙니다.</strong> 어디까지나 ‘내가 한 그 공개’를 심사 자료에서 빼달라고 주장하는 제도일 뿐입니다.</p>
+    <p>따라서 공개한 날과 출원한 날 사이에 <strong>제3자가 유사한 기술을 먼저 출원하거나 공개</strong>하면, 그 자료는 그대로 살아서 내 특허를 막는 근거가 됩니다. “12개월이 남았으니 천천히 해도 된다”가 위험한 이유입니다. 남은 기간은 여유가 아니라 <strong>이미 흐르기 시작한 시계</strong>입니다.</p>
+  </div>
+</div>
+
+<h2>해외 진출 계획이 있다면 이야기가 또 달라집니다</h2>
+
+<p>한국에서 공지예외를 인정받았다고 해서 다른 나라에서도 같은 결과가 나오는 것은 아닙니다. 국가마다 제도의 성격 자체가 다릅니다.</p>
+
+<div class="tbl-cap">주요국 공지예외(Grace Period) 개관</div>
+<table>
+  <thead>
+    <tr><th style="width:15%">국가</th><th style="width:20%">유예기간</th><th>실무상 유의점</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>한국</td>
+      <td>12개월</td>
+      <td>비교적 폭넓게 인정. 원칙은 출원서 기재 + 30일 내 증명서류 제출이나, 보완수수료를 내고 법정 기간에 사후 보완 가능.</td>
+    </tr>
+    <tr>
+      <td>미국</td>
+      <td>12개월</td>
+      <td>발명자 유래 공개에 대해 폭넓은 유예를 인정. 한국과 함께 상대적으로 여지가 큰 편.</td>
+    </tr>
+    <tr>
+      <td>유럽(EPO)</td>
+      <td>사실상 없음</td>
+      <td>국제박람회 출품·명백한 남용 등 극히 제한적인 경우만 인정. 자발적 공개는 원칙적으로 구제되지 않음.</td>
+    </tr>
+    <tr>
+      <td>중국</td>
+      <td>6개월(제한적)</td>
+      <td>지정 박람회·지정 학술회의 등 공개 형태가 한정. 크라우드펀딩·SNS 공개는 인정받기 어려움.</td>
+    </tr>
+    <tr>
+      <td>일본</td>
+      <td>12개월</td>
+      <td>인정 범위는 넓은 편이나 절차가 엄격. 적용 취지는 반드시 출원 시 기재해야 하며 사후 추가 불가. 증명서류는 출원일부터 30일 내 제출.</td>
+    </tr>
+  </tbody>
+</table>
+<p class="tbl-note">※ 각국 제도는 개정될 수 있으며, 위 내용은 이해를 위한 개괄입니다. 구체적 사안은 반드시 개별 검토가 필요합니다.</p>
+
+<p>정리하면 이렇습니다. <strong>국내만 보고 공개하면, 유럽과 중국은 그 순간 닫힐 수 있습니다.</strong> 반대로 미국 진출이 주된 계획이라면 아직 검토할 여지가 남아 있을 가능성이 있습니다. 해외 계획이 조금이라도 있다면, 공개 전 출원이 선택이 아니라 필수에 가깝습니다.</p>
+
+<h2>사례로 보면 더 분명해집니다</h2>
+
+<div class="case">
+  <span class="case-tag">CASE 1</span>
+  <p><b>유튜브에 시연 영상을 올린 뒤 8개월이 지난 경우</b></p>
+  <p>한 스타트업이 제품 반응을 확인하기 위해 시연 영상을 유튜브에 올렸고, 8개월이 지나 특허출원을 검토하기 시작했습니다. 이 경우 확인할 것은 세 가지입니다. 영상의 <strong>최초 게시일</strong>, 영상에서 <strong>실제로 드러난 기술 내용</strong>, 그리고 공개된 발명과 출원하려는 발명의 <strong>대응관계</strong>입니다.</p>
+  <p>영상에서 외형과 동작만 보였을 뿐 내부 구조나 제어 로직이 드러나지 않았다면, 출원 가능한 범위는 생각보다 넓게 남아 있을 수 있습니다.</p>
+  <div class="case-take">→ 이미 공개했다는 이유만으로 포기할 단계는 아닙니다. 다만 남은 4개월을 다 쓰겠다는 계획은 위험합니다.</div>
+</div>
+
+<div class="case">
+  <span class="case-tag">CASE 2</span>
+  <p><b>박람회에서 외관만 시연하고, 제어방식은 설명하지 않은 경우</b></p>
+  <p>박람회 부스에서 제품을 작동시켜 보여줬지만, 내부 제어 알고리즘이나 제조공정은 설명하지 않았습니다. 이때 <strong>제품 전체를 하나의 발명으로 묶어 출원하는 것</strong>과 <strong>공개되지 않은 제어방식을 별도의 발명으로 출원하는 것</strong>은 전혀 다른 문제입니다.</p>
+  <p>전자는 공개일 계산에 걸리지만, 후자는 <strong>애초에 공개된 적이 없는 기술</strong>이므로 신규성 문제 자체가 발생하지 않을 수 있습니다.</p>
+  <div class="case-take">→ 내 기술을 ‘공개된 부분’과 ‘공개되지 않은 부분’으로 나누는 작업이 곧 출원 전략입니다.</div>
+</div>
+
+<div class="case">
+  <span class="case-tag">CASE 3</span>
+  <p><b>IR 피칭에서 기술 구조를 설명한 경우</b></p>
+  <p>이 경우는 단정하기 어렵습니다. 참석자가 제한되고 비밀유지의무가 있었다면 공개에 해당하지 않을 가능성이 있습니다. 반대로 <strong>누구나 참석할 수 있는 자리였거나, 발표자료가 자유롭게 배포·재전달될 수 있는 상태</strong>였다면 판단이 달라집니다.</p>
+  <p>NDA가 없었다고 해서 무조건 공개로 확정되는 것도 아닙니다. 관계의 성격과 자료의 전달 방식에 따라 비밀유지의무가 인정될 여지가 있기 때문입니다.</p>
+  <div class="case-take">→ “보여줬다 = 공개다”가 아닙니다. 누구에게, 어떤 조건으로 보여줬는지가 결론을 가릅니다.</div>
+</div>
+
+<h2>이미 공개했다면, 이 세 가지부터 확인하세요</h2>
+
+<ol class="steps">
+  <li><b>최초 공개일을 특정한다</b>펀딩 페이지 최초 게시일, 영상 업로드일, 전시 개시일, 판매 개시일 등 <strong>같은 기술이 드러난 공개 중 가장 빠른 날</strong>이 기준입니다. “대략 작년쯤”으로는 12개월을 계산할 수 없습니다.</li>
+  <li><b>공개 범위를 나눈다</b>어디까지 보여줬는지 선을 그어야 합니다. 외관인가 내부 구조인가, 결과인가 원리인가. 공개되지 않은 세부 기술·제조공정·개선사항은 별도 출원의 대상이 될 수 있습니다.</li>
+  <li><b>증거를 그대로 보존한다</b>URL만 적어두면 나중에 페이지가 바뀝니다. 화면 캡처, PDF 저장, 영상 파일, 브로슈어 원본까지 <strong>공개 당시 상태 그대로</strong> 확보해 두십시오. 원칙적으로 30일 내 제출하는 증명서류도 이 자료를 토대로 준비합니다.</li>
+</ol>
+
+<p>그리고 한 가지 더. <strong>추가 공개를 일단 멈추십시오.</strong> 검토가 끝나기 전까지 새 게시물, 새 전시, 새 배포자료는 상황을 더 복잡하게 만들 뿐입니다.</p>
+
+<h2>결론</h2>
+
+<p>가장 좋은 방법은 언제나 <strong>공개 전에 출원하는 것</strong>입니다. 이 원칙은 변하지 않습니다.</p>
+
+<p>다만 이미 펀딩을 시작했거나 시연 영상을 올렸다고 해서 바로 포기할 필요는 없습니다. 최초 공개일로부터 시간이 얼마나 지났는지 확인하고, 출원할 수 있는 기술의 범위를 신속하게 점검하면 됩니다. <strong>공개는 끝이 아니라, 시계가 돌기 시작했다는 신호입니다.</strong></p>
+
+<div class="close">
+  <h3>상담을 준비하신다면</h3>
+  <p>공개한 자료와 최초 공개일만 정리해 오시면, 출원 가능한 범위를 구체적으로 판단해 드릴 수 있습니다. 공개된 부분뿐 아니라 이후 추가된 개선기술과 아직 공개되지 않은 기술까지 나누어 검토하는 것이 핵심입니다.</p>
+  <div class="firm">
+    <b>비온 특허법률사무소</b>&nbsp; BeON Patent &amp; Law Firm<br>
+    서울 영등포구 국제금융로8길 25, 6층 630호&nbsp; ·&nbsp; Tel 02-6952-0304&nbsp; ·&nbsp; mail@beonip.com
+  </div>
+</div>
+
+<p class="disclaimer">본 칼럼은 일반적인 정보 제공을 목적으로 하며, 개별 사안에 대한 법률 자문이 아닙니다. 본문의 사례는 이해를 돕기 위해 구성한 가상의 사례입니다. 구체적인 사건은 사실관계에 따라 결론이 달라질 수 있으므로 반드시 전문가와 상담하시기 바랍니다.</p>
+
+</main>
+</div>
+</body>
+</html>
