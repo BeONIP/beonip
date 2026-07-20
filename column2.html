@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>회사·브랜드명 확정 전 반드시 확인할 상표 문제 | 비온 특허법률사무소</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Noto+Serif+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root {
+    --navy: #16233D;
+    --navy-deep: #111A2E;
+    --navy-tint: #F1ECE1;
+    --ivory: #F8F4EC;
+    --ivory-lift: #FDFBF6;
+    --ivory-soft: #F1ECE1;
+    --line: #E4DDD0;
+    --text: #111A2E;
+    --muted: #5B6472;
+    --caption: #918E85;
+    --accent: #7C93A6;
+    --serif-kr: 'Noto Serif KR', serif;
+    --sans: 'Pretendard', 'Pretendard Variable', system-ui, -apple-system, 'Apple SD Gothic Neo', sans-serif;
+    --mont: 'Montserrat', 'Pretendard', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ivory);
+    font-family: var(--sans);
+    color: var(--text);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--ivory-lift);
+    padding: 0 0 80px;
+  }
+
+  /* Header */
+  header.masthead {
+    border-top: 4px solid var(--navy);
+    padding: 46px 56px 34px;
+    border-bottom: 1px solid var(--line);
+  }
+  
+  /* Logo & Eyebrow */
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: var(--caption);
+    font-family: var(--mont);
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .logo-text {
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0;
+    margin-right: 8px;
+  }
+  .logo-text .be { color: #1B365D; }
+  .logo-text .on { color: #677A8B; }
+  .eyebrow-text { padding-top: 2px; }
+
+  h1 {
+    font-family: var(--serif-kr);
+    font-size: 32px;
+    line-height: 1.42;
+    font-weight: 400;
+    color: var(--navy-deep);
+    margin: 0 0 18px;
+    letter-spacing: -0.02em;
+  }
+  .deck {
+    font-size: 16px;
+    color: var(--muted);
+    font-weight: 400;
+    margin: 0;
+  }
+  .byline {
+    margin-top: 26px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .byline strong { color: var(--navy); font-weight: 500; }
+
+  main { padding: 44px 56px 0; }
+
+  h2 {
+    font-family: var(--serif-kr);
+    font-size: 21px;
+    color: var(--navy-deep);
+    font-weight: 500;
+    margin: 54px 0 20px;
+    padding-left: 14px;
+    border-left: 4px solid var(--navy);
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-family: var(--serif-kr);
+    font-size: 16px;
+    color: var(--navy);
+    font-weight: 700;
+    margin: 32px 0 10px;
+  }
+  p { margin: 0 0 18px; font-size: 15.5px; font-weight: 400; }
+  strong { font-weight: 600; color: var(--navy-deep); }
+
+  /* Opening quotes */
+  .voices {
+    background: var(--navy-tint);
+    border-radius: 4px;
+    padding: 26px 30px;
+    margin: 0 0 30px;
+  }
+  .voices p {
+    margin: 0 0 12px;
+    font-size: 15.5px;
+    color: var(--navy-deep);
+    font-weight: 400;
+    padding-left: 18px;
+    position: relative;
+  }
+  .voices p:last-child { margin-bottom: 0; }
+  .voices p::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 12px;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  /* Pull callout */
+  .pull {
+    margin: 34px 0;
+    padding: 22px 26px;
+    border-left: 3px solid var(--accent);
+    background: var(--ivory-soft);
+    font-size: 16.5px;
+    font-weight: 500;
+    color: var(--navy-deep);
+    line-height: 1.7;
+  }
+
+  /* Warning box */
+  .warn {
+    margin: 30px 0;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .warn-h {
+    background: var(--navy);
+    color: var(--ivory);
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .warn-b { padding: 20px 24px; }
+  .warn-b p:last-child { margin-bottom: 0; }
+
+  /* Case study */
+  .case {
+    margin: 28px 0;
+    padding: 24px 26px;
+    background: var(--ivory);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+  }
+  .case-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-family: var(--mont);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--ivory);
+    background: var(--navy);
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-bottom: 14px;
+  }
+  .case p { margin-bottom: 12px; }
+  .case p:last-child { margin-bottom: 0; }
+  .case-take {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--line);
+    font-size: 14.5px;
+    color: var(--navy-deep);
+    font-weight: 500;
+  }
+
+  /* Table */
+  .tbl-cap {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 30px 0 10px;
+    font-weight: 500;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 12px;
+    font-size: 14px;
+  }
+  thead th {
+    background: var(--navy);
+    color: var(--ivory);
+    font-weight: 500;
+    padding: 12px 14px;
+    text-align: left;
+    font-size: 13.5px;
+  }
+  tbody td {
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+    font-weight: 400;
+  }
+  tbody tr:nth-child(even) { background: var(--ivory); }
+  tbody td:first-child {
+    font-weight: 500;
+    color: var(--navy-deep);
+    white-space: nowrap;
+  }
+  .tbl-note {
+    font-size: 12.5px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  /* Checklist */
+  .steps {
+    counter-reset: s;
+    list-style: none;
+    padding: 0;
+    margin: 26px 0;
+  }
+  .steps li {
+    counter-increment: s;
+    position: relative;
+    padding: 0 0 20px 46px;
+    font-size: 15.5px;
+    font-weight: 400;
+  }
+  .steps li::before {
+    content: counter(s);
+    position: absolute;
+    left: 0; top: 2px;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--ivory);
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .steps li b {
+    display: block;
+    color: var(--navy-deep);
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  /* Closing */
+  .close {
+    margin-top: 50px;
+    padding: 30px 32px;
+    background: var(--navy);
+    border-radius: 4px;
+    color: var(--ivory);
+  }
+  .close h3 {
+    color: var(--ivory);
+    margin: 0 0 12px;
+    font-size: 17px;
+  }
+  .close p {
+    color: var(--ivory-soft);
+    font-size: 14.5px;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+  .close p strong { color: var(--ivory); }
+  .close .firm {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(248,244,236,0.18);
+    font-size: 13px;
+    color: var(--accent);
+  }
+  .close .firm b { color: var(--ivory); font-weight: 500; }
+
+  .disclaimer {
+    margin-top: 26px;
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 640px) {
+    header.masthead { padding: 34px 22px 26px; }
+    main { padding: 32px 22px 0; }
+    h1 { font-size: 24px; }
+    h2 { font-size: 18.5px; }
+    table { font-size: 13px; }
+    tbody td:first-child { white-space: normal; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <div class="logo-text"><span class="be">Be</span><span class="on">ON</span></div>
+    <div class="eyebrow-text">IP COLUMN &nbsp;|&nbsp; 02</div>
+  </div>
+  <h1>간판부터 달고 명함부터 파셨나요?<br>브랜드 확정 전 반드시 피해야 할 착각</h1>
+  <p class="deck">훌륭한 이름은 브랜드를 알리지만, 상표권은 브랜드를 지킵니다. 불필요한 리브랜딩과 분쟁 위험을 줄이는 첫 단계.</p>
+  <div class="byline"><strong>비온 특허법률사무소</strong> &nbsp;·&nbsp; BeON Patent &amp; Law Firm</div>
+</header>
+
+<main>
+
+<div class="voices">
+  <p>“팀원들이랑 밤새워 고민해서 끝내주는 서비스명을 정했습니다.”</p>
+  <p>“이름 정하자마자 도메인부터 샀고, 로고 디자인도 외주 맡겼어요!”</p>
+</div>
+
+<p>사업 초기, 회사나 서비스의 정체성을 담은 이름을 짓고 번듯한 로고가 완성될 때의 만족감은 큽니다. 서둘러 명함을 만들고, 패키지를 발주하고, 앱스토어나 온라인 판매채널에 등록을 진행하기도 합니다.</p>
+
+<p>그런데 제품이나 서비스 출시 직후, 알지 못하던 회사로부터 '상표권 침해 중지 요청(내용증명)'을 받는다면 어떨까요? 로고 디자인, 광고물, 포장재, 앱 화면과 도메인까지 다시 바꿔야 하는 상황은 생각보다 큰 비용과 시간 손실로 이어질 수 있습니다.</p>
+
+<p>브랜드 네이밍은 예쁜 로고가 나왔을 때가 아니라, <strong>선행상표를 검토하고 필요한 출원 전략까지 세웠을 때</strong> 비로소 완성됩니다.</p>
+
+<h2>가장 흔한 착각: 상호 ≠ 상표</h2>
+
+<p>상표 상담을 하다 보면 많은 분들이 이렇게 말씀하십니다. <em>"법인 등기소에서 통과됐는데요?", "세무서에서 이 이름으로 사업자등록증을 냈는데요?"</em></p>
+
+<p>하지만 법인 등기나 사업자등록이 그 명칭을 브랜드로 독점할 권리까지 보장하는 것은 아닙니다. <strong>상호와 상표는 등록 절차와 보호 범위가 서로 다릅니다.</strong></p>
+
+<div class="tbl-cap">상호와 상표의 차이</div>
+<table>
+  <thead>
+    <tr><th style="width:22%">구분</th><th style="width:38%">상호 (법인명)</th><th>상표</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>등록 기관</td>
+      <td>법인 상호는 등기소<br>사업자등록은 세무서의 행정절차</td>
+      <td>지식재산처(구 특허청)</td>
+    </tr>
+    <tr>
+      <td>효력 범위</td>
+      <td>등기상호는 동일한 시·군 등 일정 지역에서 동종영업의 동일 상호 중복 등기를 제한</td>
+      <td>지정한 상품·서비스업을 기준으로 전국적으로 보호</td>
+    </tr>
+    <tr>
+      <td>권리 성격</td>
+      <td>사업주체를 나타내는 명칭으로서 보호</td>
+      <td>등록상표의 사용을 독점하고 동일·유사 범위의 타인 사용을 제한</td>
+    </tr>
+    <tr>
+      <td>비유하자면</td>
+      <td>사업자의 이름을 정하는 것</td>
+      <td>상품·서비스에 사용하는 브랜드 표지를 보호하는 것</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>내 사업자등록증이나 법인등기부에 적힌 이름이라도, 누군가 먼저 동일·유사한 상표를 관련 상품·서비스업에 등록해 두었다면 그 명칭을 간판, 제품, 광고 등에 브랜드로 사용하는 과정에서 상표권 침해 문제가 생길 수 있습니다. <strong>법인 등기나 사업자등록이 상표권 침해를 피할 수 있는 면죄부가 되지는 않습니다.</strong></p>
+
+<p>도메인이나 SNS 계정, 앱스토어의 서비스명을 먼저 확보한 경우도 마찬가지입니다. 해당 명칭을 사용할 수 있는 온라인 계정을 선점했다는 것과 상표권을 확보했다는 것은 별개의 문제입니다.</p>
+
+<h2>서비스명을 다시 바꿔야 했던 사례</h2>
+
+<div class="case">
+  <span class="case-tag">CASE STUDY</span>
+  <p><b>배경 —</b> 다음은 이해를 돕기 위해 구성한 가상의 사례입니다. 한 라이프스타일 플랫폼 회사가 앱을 출시하고 옥외광고까지 집행했습니다.</p>
+  <p><b>실수 —</b> 회사는 공식 특허정보검색서비스인 키프리스(KIPRIS)에서 동일한 이름이 없는지 확인했습니다. 문제는 '똑같은 이름'만 검색했다는 점이었습니다.</p>
+  <p><b>위기 —</b> 글자 하나가 다르고 로고 모양도 달랐지만, <strong>발음이 매우 비슷한</strong> 선등록상표가 존재했습니다. 두 회사의 지정서비스업과 실제 사업 분야도 상당 부분 겹쳤습니다.</p>
+  <div class="case-take">→ <b>결과:</b> 검토 결과 선등록상표와 유사하다고 판단될 가능성이 높고 분쟁 위험도 큰 것으로 보였습니다. 회사는 장기간의 다툼보다 서비스명을 전면 교체하는 방법을 선택했고, 이미 제작한 광고물과 디자인을 다시 만드는 비용과 시간을 부담해야 했습니다.</div>
+</div>
+
+<h2>브랜드명 확정 전, 이것만은 꼭 체크하세요</h2>
+
+<p>이런 비극을 막기 위해, 디자인이나 마케팅에 돈을 쓰기 전 반드시 다음 세 가지를 점검해야 합니다.</p>
+
+<ol class="steps">
+  <li><b>똑같은 이름뿐만 아니라 '비슷한' 이름도 찾아야 합니다</b>키프리스(KIPRIS)에서 똑같은 글자가 검색되지 않는다고 안심해서는 안 됩니다. 상표는 외관, 호칭, 관념을 전체적으로 비교하므로 글자가 조금 달라도 발음이나 뜻이 비슷하면 문제가 될 수 있습니다. 한글·영문 표기, 띄어쓰기와 철자 변형도 함께 살펴야 하며, 등록상표뿐 아니라 먼저 출원되어 심사 중인 상표도 확인해야 합니다.</li>
+  <li><b>'어떤 분야'에 쓸 것인지(지정상품·서비스업) 확인해야 합니다</b>같은 이름이라도 사용하는 상품·서비스 분야가 충분히 다르면 공존할 가능성이 있습니다. 예를 들어 특정 명칭이 화장품에 등록되어 있더라도 소프트웨어 개발업에서는 등록 가능성이 남아 있을 수 있습니다. 다만 상품류 번호가 다르다고 곧바로 안전한 것은 아닙니다. 실제 상품·서비스의 성질, 제공 방식, 유통경로와 수요자 범위 등을 종합적으로 살펴야 하고, 유명·저명상표는 분야가 달라도 문제가 될 수 있습니다.</li>
+  <li><b>브랜드명 자체에 식별력이 있는지 파악해야 합니다</b>서비스의 특징이나 효능을 직접적으로 설명하는 명칭은 원칙적으로 상표등록이 어렵습니다. 배송 서비스에 '빠른 배송', 과자에 '맛있는 스낵'과 같은 명칭을 사용하는 경우입니다. 장기간의 사용으로 특정 사업자의 브랜드라고 널리 인식된 경우에는 예외가 있을 수 있지만, 사업 초기라면 설명적인 표현을 피하고 고유한 조어 등 식별력 있는 명칭을 검토하는 편이 안전합니다.</li>
+</ol>
+
+<h2>검색 결과가 깨끗해도, 출원을 미루면 안 됩니다</h2>
+
+<p>선행상표 검색은 그 시점의 위험을 확인하는 절차일 뿐, 해당 이름을 예약하거나 선점해 주는 절차가 아닙니다. 우리나라 상표제도는 원칙적으로 먼저 사용한 사람이 아니라 <strong>먼저 출원한 사람에게 우선권을 인정하는 선출원주의</strong>를 따릅니다. 검색 당시 문제가 없었더라도 출원을 미루는 동안 다른 사람이 동일·유사한 상표를 먼저 출원하면 상황이 달라질 수 있습니다.</p>
+
+<p>따라서 브랜드명을 확정했다면 로고 제작, 광고 집행과 패키지 발주 전에 필요한 상품·서비스업을 정해 출원을 진행하는 것이 좋습니다. 현재 사업뿐 아니라 가까운 시일 내 확장할 상품·서비스까지 살펴보고, 브랜드명 자체의 문자상표와 로고 결합상표 중 무엇을 출원할지도 함께 검토해야 합니다.</p>
+
+<p>다만 키프리스 검색에서 충돌하는 상표가 발견되지 않았다는 사실만으로 등록 가능성이나 비침해가 보장되는 것은 아닙니다. 상표의 유사 여부, 식별력과 지정상품·서비스업의 범위는 구체적인 사안에 따라 달라질 수 있습니다.</p>
+
+<h2>결론</h2>
+
+<p>브랜드를 알리는 데에는 오랜 시간이 걸리지만, 상표 문제로 이름을 바꾸게 되면 그동안 쌓아온 인지도와 마케팅 자산을 상당 부분 다시 만들어야 합니다.</p>
+
+<p>마음에 드는 회사명이나 브랜드명을 찾으셨나요? 법인 등기, 로고 제작이나 광고 집행을 서두르기 전에 선행상표와 지정상품·서비스업을 먼저 확인해 보시기 바랍니다. 초기의 짧은 검토가 향후 리브랜딩과 분쟁 위험을 크게 줄일 수 있습니다.</p>
+
+<div class="close">
+  <h3>지금 염두에 두고 계신 브랜드명이 있나요?</h3>
+  <p>로고 제작이나 법인 등기를 진행하기 전에, 먼저 선행상표와 출원 가능성을 검토해 보세요. <strong>비온은 브랜드의 현재 사업과 확장 계획을 함께 살펴 필요한 지정상품·서비스업과 출원 방향을 제안합니다.</strong></p>
+  <div class="firm">
+    <b>비온 특허법률사무소</b>&nbsp; BeON Patent &amp; Law Firm<br>
+    서울 영등포구 국제금융로8길 25, 6층 630호&nbsp; ·&nbsp; Tel 02-6952-0304&nbsp; ·&nbsp; mail@beonip.com
+  </div>
+</div>
+
+<p class="disclaimer">본 칼럼은 일반적인 정보 제공을 목적으로 하며, 개별 사안에 대한 법률 자문이 아닙니다. 본문의 사례는 이해를 돕기 위해 구성한 가상의 사례입니다. 구체적인 사건은 사실관계에 따라 결론이 달라질 수 있으므로 반드시 전문가와 상담하시기 바랍니다.</p>
+
+</main>
+</div>
+</body>
+</html>
