@@ -295,6 +295,22 @@ nav.links a:hover::after{width:100%}
 .info-row .k{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate-soft)}
 .info-row .v{color:var(--navy-deep)}
 .info-row .v a:hover{color:var(--mist)}
+.kakao-channel-link{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  color:inherit;
+  white-space:nowrap;
+}
+.kakao-channel-link .link-arrow{
+  font-size:.82em;
+  opacity:.72;
+  transition:transform .2s ease, opacity .2s ease;
+}
+.kakao-channel-link:hover .link-arrow{
+  transform:translate(2px,-2px);
+  opacity:1;
+}
   /* ---- access ---- */
 .access .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
   gap:clamp(2rem,6vw,5rem);align-items:start}
@@ -658,6 +674,7 @@ footer .fmeta a:hover{color:var(--ivory)}
     <div class="info reveal">
       <div class="info-row"><div class="k">Firm</div><div class="v">비온 특허법률사무소 · <span class="beon">Be<span class="on">ON</span></span> Patent &amp; Law Firm</div></div>
       <div class="info-row"><div class="k">Email</div><div class="v"><a href="mailto:mail@beonip.com" data-mail>mail@beonip.com</a></div></div>
+      <div class="info-row"><div class="k">Kakao</div><div class="v"><a class="kakao-channel-link" href="https://pf.kakao.com/_MixcfX/friend" target="_blank" rel="noopener noreferrer" aria-label="비온 특허법률사무소 카카오톡 채널 추가">카카오톡 채널 추가 <span class="link-arrow" aria-hidden="true">↗</span></a></div></div>
       <div class="info-row"><div class="k">Tel</div><div class="v"><a href="tel:+82269520304">02-6952-0304</a></div></div>
       <div class="info-row"><div class="k">Web</div><div class="v"><a href="https://www.beonip.com">www.beonip.com</a></div></div>
     </div>
