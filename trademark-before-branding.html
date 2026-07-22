@@ -316,7 +316,37 @@
     color: var(--accent);
   }
   .close .firm b { color: var(--ivory); font-weight: 500; }
-
+  .close .cta {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px;
+  }
+  .close .cta a {
+    display: inline-block; padding: 11px 20px; border-radius: 3px;
+    font-size: 14px; text-decoration: none;
+    transition: background .2s, color .2s, border-color .2s;
+  }
+  .close .cta .btn-primary {
+    background: var(--ivory); color: var(--navy); font-weight: 600;
+  }
+  .close .cta .btn-primary:hover { background: #fff; }
+  .close .cta .btn-ghost {
+    border: 1px solid rgba(248,244,236,0.35); color: var(--ivory);
+  }
+  .close .cta .btn-ghost:hover {
+    border-color: var(--ivory); background: rgba(248,244,236,0.08);
+  }
+  .more {
+    margin-top: 40px; padding-top: 22px;
+    border-top: 1px solid var(--line); font-size: 14px;
+  }
+  .more span {
+    display: block; color: var(--caption); font-size: 12.5px;
+    letter-spacing: .04em; margin-bottom: 8px;
+  }
+  .more a {
+    color: var(--navy); text-decoration: none;
+    border-bottom: 1px solid var(--line); font-weight: 500;
+  }
+  .more a:hover { border-color: var(--navy); }
   .disclaimer {
     margin-top: 26px;
     font-size: 12px;
@@ -437,12 +467,12 @@
 <div class="close">
   <h3>지금 염두에 두고 계신 브랜드명이 있나요?</h3>
   <p>로고 제작이나 법인 등기를 진행하기 전에, 먼저 선행상표와 출원 가능성을 검토해 보세요. <strong>비온은 브랜드의 현재 사업과 확장 계획을 함께 살펴 필요한 지정상품·서비스업과 출원 방향을 제안합니다.</strong></p>
-  <div class="firm">
-    <b>비온 특허법률사무소</b>&nbsp; BeON Patent &amp; Law Firm<br>
-    서울 영등포구 국제금융로8길 25, 6층 630호&nbsp; ·&nbsp; Tel 02-6952-0304&nbsp; ·&nbsp; mail@beonip.com
-  </div>
+ <b>비온 특허법률사무소</b>&nbsp; BeON Patent &amp; Law Firm<br>
 </div>
-
+<div class="more">
+  <span>함께 읽으면 좋은 글</span>
+  <a href="https://beonip.com/patent-after-disclosure.html" target="_top">제품 공개 후에도 특허출원 가능할까 — 공지예외적용 12개월</a>
+</div>
 <p class="disclaimer">본 칼럼은 일반적인 정보 제공을 목적으로 하며, 개별 사안에 대한 법률 자문이 아닙니다. 본문의 사례는 이해를 돕기 위해 구성한 가상의 사례입니다. 구체적인 사건은 사실관계에 따라 결론이 달라질 수 있으므로 반드시 전문가와 상담하시기 바랍니다.</p>
 
 </main>
