@@ -2,4 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://beonip.com/</loc><priority>1.0</priority></url>
   <url><loc>https://beonip.com/privacy.html</loc><priority>0.3</priority></url>
+  <url><loc>https://beonip.com/column1.html</loc></url>
+  <url><loc>https://beonip.com/column2.html</loc></url>
 </urlset>
