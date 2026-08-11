@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBDP1D93YX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZBDP1D93YX');
+</script>
+<script type="text/javascript" src="//wcs.pstatic.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "2507e15c836f840";
+if(window.wcs) {
+  wcs_do();
+}
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>특허 한 건이면 충분할까요? | 청구범위와 출원 건수 · 비온 특허법률사무소</title>
+<meta name="description" content="특허의 힘은 건수가 아니라 청구범위에서 결정됩니다. 최초 명세서 설계, 회피 경로 차단, 분할·후속 출원을 검토할 시점을 변리사가 정리했습니다.">
+<link rel="canonical" href="https://beonip.com/how-many-patents-needed.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="특허 한 건이면 충분할까요? — 건수보다 청구범위">
+<meta property="og:description" content="여러 건을 내기 전에 첫 출원부터 제대로 설계해야 합니다. 신제품 보호 시리즈 (1).">
+<meta property="og:url" content="https://beonip.com/how-many-patents-needed.html">
+<meta property="og:image" content="https://beonip.com/beon-logo-header.png">
+<meta property="og:site_name" content="비온 특허법률사무소">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Noto+Serif+KR:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root {
+    --navy: #16233D;
+    --navy-deep: #111A2E;
+    --navy-tint: #F1ECE1;
+    --ivory: #F8F4EC;
+    --ivory-lift: #FDFBF6;
+    --ivory-soft: #F1ECE1;
+    --line: #E4DDD0;
+    --text: #111A2E;
+    --muted: #5B6472;
+    --caption: #918E85;
+    --accent: #7C93A6;
+    --serif-kr: 'Noto Serif KR', serif;
+    --sans: 'Pretendard', 'Pretendard Variable', system-ui, -apple-system, 'Apple SD Gothic Neo', sans-serif;
+    --mont: 'Montserrat', 'Pretendard', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ivory);
+    font-family: var(--sans);
+    color: var(--text);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--ivory-lift);
+    padding: 0 0 80px;
+  }
+
+  /* Header */
+  header.masthead {
+    border-top: 4px solid var(--navy);
+    padding: 46px 56px 34px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* Logo & Eyebrow */
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: var(--caption);
+    font-family: var(--mont);
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .logo-text {
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0;
+    margin-right: 8px;
+  }
+  .logo-text .be { color: #1B365D; }
+  .logo-text .on { color: #677A8B; }
+  .eyebrow-text { padding-top: 2px; }
+
+  h1 {
+    font-family: var(--serif-kr);
+    font-size: 32px;
+    line-height: 1.42;
+    font-weight: 400;
+    color: var(--navy-deep);
+    margin: 0 0 18px;
+    letter-spacing: -0.02em;
+  }
+  .deck {
+    font-size: 16px;
+    color: var(--muted);
+    font-weight: 400;
+    margin: 0;
+  }
+  .byline {
+    margin-top: 26px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .byline strong { color: var(--navy); font-weight: 500; }
+
+  main { padding: 44px 56px 0; }
+
+  h2 {
+    font-family: var(--serif-kr);
+    font-size: 21px;
+    color: var(--navy-deep);
+    font-weight: 500;
+    margin: 54px 0 20px;
+    padding-left: 14px;
+    border-left: 4px solid var(--navy);
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-family: var(--serif-kr);
+    font-size: 16px;
+    color: var(--navy);
+    font-weight: 700;
+    margin: 32px 0 10px;
+  }
+  p { margin: 0 0 18px; font-size: 15.5px; font-weight: 400; }
+  strong { font-weight: 600; color: var(--navy-deep); }
+
+  /* Opening quotes */
+  .voices {
+    background: var(--navy-tint);
+    border-radius: 4px;
+    padding: 26px 30px;
+    margin: 0 0 30px;
+  }
+  .voices p {
+    margin: 0 0 12px;
+    font-size: 15.5px;
+    color: var(--navy-deep);
+    font-weight: 400;
+    padding-left: 18px;
+    position: relative;
+  }
+  .voices p:last-child { margin-bottom: 0; }
+  .voices p::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 12px;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  /* Pull callout */
+  .pull {
+    margin: 34px 0;
+    padding: 22px 26px;
+    border-left: 3px solid var(--accent);
+    background: var(--ivory-soft);
+    font-size: 16.5px;
+    font-weight: 500;
+    color: var(--navy-deep);
+    line-height: 1.7;
+  }
+
+  /* Warning box */
+  .warn {
+    margin: 30px 0;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .warn-h {
+    background: var(--navy);
+    color: var(--ivory);
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .warn-b { padding: 20px 24px; }
+  .warn-b p:last-child { margin-bottom: 0; }
+
+  /* Table */
+  .tbl-cap {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 30px 0 10px;
+    font-weight: 500;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 12px;
+    font-size: 14px;
+  }
+  thead th {
+    background: var(--navy);
+    color: var(--ivory);
+    font-weight: 500;
+    padding: 12px 14px;
+    text-align: left;
+    font-size: 13.5px;
+  }
+  tbody td {
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+    font-weight: 400;
+  }
+  tbody tr:nth-child(even) { background: var(--ivory); }
+  tbody td:first-child {
+    font-weight: 500;
+    color: var(--navy-deep);
+    white-space: nowrap;
+  }
+  .tbl-note {
+    font-size: 12.5px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-bottom: 0;
+    line-height: 1.7;
+  }
+
+  /* Checklist */
+  .steps {
+    counter-reset: s;
+    list-style: none;
+    padding: 0;
+    margin: 26px 0;
+  }
+  .steps li {
+    counter-increment: s;
+    position: relative;
+    padding: 0 0 20px 46px;
+    font-size: 15.5px;
+    font-weight: 400;
+  }
+  .steps li::before {
+    content: counter(s);
+    position: absolute;
+    left: 0; top: 2px;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--ivory);
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .steps li b {
+    display: block;
+    color: var(--navy-deep);
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  /* Series navigation */
+  .series {
+    margin: 46px 0 0;
+    padding: 20px 24px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--ivory);
+  }
+  .series .series-h {
+    font-family: var(--mont);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--caption);
+    margin-bottom: 12px;
+  }
+  .series ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: c;
+  }
+  .series li {
+    counter-increment: c;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+    padding: 4px 0 4px 26px;
+    position: relative;
+  }
+  .series li::before {
+    content: counter(c) '.';
+    position: absolute;
+    left: 0;
+    font-family: var(--mont);
+    font-weight: 700;
+    font-size: 12.5px;
+    color: var(--accent);
+  }
+  .series li b { color: var(--navy-deep); font-weight: 600; }
+  .series li.here { color: var(--navy-deep); }
+  .series li.here::before { color: var(--navy); }
+  .series .here-tag {
+    display: inline-block;
+    font-size: 10.5px;
+    font-family: var(--mont);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--ivory);
+    background: var(--navy);
+    padding: 1px 7px;
+    border-radius: 2px;
+    margin-left: 6px;
+    vertical-align: 2px;
+  }
+
+  /* Closing */
+  .close {
+    margin-top: 24px;
+    padding: 30px 32px;
+    background: var(--navy);
+    border-radius: 4px;
+    color: var(--ivory);
+  }
+  .close h3 {
+    color: var(--ivory);
+    margin: 0 0 12px;
+    font-size: 17px;
+  }
+  .close p {
+    color: var(--ivory-soft);
+    font-size: 14.5px;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+  .close p strong { color: var(--ivory); }
+  .close .firm {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(248,244,236,0.18);
+    font-size: 13px;
+    color: var(--accent);
+  }
+  .close .firm b { color: var(--ivory); font-weight: 500; }
+  .close .cta {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px;
+  }
+  .close .cta a {
+    display: inline-block; padding: 11px 20px; border-radius: 3px;
+    font-size: 14px; text-decoration: none;
+    transition: background .2s, color .2s, border-color .2s;
+  }
+  .close .cta .btn-primary {
+    background: var(--ivory); color: var(--navy); font-weight: 600;
+  }
+  .close .cta .btn-primary:hover { background: #fff; }
+  .close .cta .btn-ghost {
+    border: 1px solid rgba(248,244,236,0.35); color: var(--ivory);
+  }
+  .close .cta .btn-ghost:hover {
+    border-color: var(--ivory); background: rgba(248,244,236,0.08);
+  }
+  .more {
+    margin-top: 40px; padding-top: 22px;
+    border-top: 1px solid var(--line); font-size: 14px;
+  }
+  .more span {
+    display: block; color: var(--caption); font-size: 12.5px;
+    letter-spacing: .04em; margin-bottom: 8px;
+  }
+  .more a {
+    color: var(--navy); text-decoration: none;
+    border-bottom: 1px solid var(--line); font-weight: 500;
+    display: block; margin-bottom: 6px;
+  }
+  .more a:hover { border-color: var(--navy); }
+
+
+  .disclaimer {
+    margin-top: 26px;
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 640px) {
+    header.masthead { padding: 34px 22px 26px; }
+    main { padding: 32px 22px 0; }
+    h1 { font-size: 24px; }
+    h2 { font-size: 18.5px; }
+    table { font-size: 13px; }
+    tbody td:first-child { white-space: normal; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <div class="logo-text"><span class="be">Be</span><span class="on">ON</span></div>
+    <div class="eyebrow-text">IP COLUMN &nbsp;|&nbsp; 04 &nbsp;·&nbsp; 신제품 보호 (1)</div>
+  </div>
+  <h1>특허 한 건이면<br>충분할까요?</h1>
+  <p class="deck">출원 건수보다 먼저, 최초 명세서와 청구범위에 핵심 기술과 예상 가능한 회피 경로를 제대로 담아야 합니다.</p>
+  <div class="byline"><strong>비온 특허법률사무소</strong> &nbsp;·&nbsp; BeON Patent &amp; Law Firm</div>
+</header>
+
+<main>
+
+<div class="voices">
+  <p>“신제품 특허를 출원했으니 이제 아무도 못 베끼겠죠?”</p>
+  <p>“핵심 기술 하나만 출원하면 충분한가요, 여러 건으로 나눠야 하나요?”</p>
+</div>
+
+<p>신제품의 특허를 준비할 때 흔히 “몇 건을 내야 안전한가”부터 묻습니다. 그러나 같은 한 건이라도 핵심 원리와 변형례를 충실히 담았는지, 특정 부품이나 수치에 지나치게 한정되었는지에 따라 실질적인 보호범위는 크게 달라집니다.</p>
+
+<p>이 글에서 다루는 것은 <strong>특허 제도 안에서 한 건을 어떻게 설계하고 언제 추가 출원을 검토할지</strong>입니다. 제품의 외관·이름·비공개 노하우에 어떤 보호수단이 필요한지는 다음 편에서 구분해 살펴봅니다.</p>
+
+<p><strong>특허 한 건으로 충분한지는 건수만으로 판단할 수 없습니다.</strong> 먼저 첫 출원을 제대로 설계하고, 서로 다른 기술적 과제가 있거나 후속 개발이 이루어진 경우에 추가 출원을 검토하는 것이 순서입니다.</p>
+
+<div class="pull">
+  좁은 특허 여러 건보다 <b>사업의 핵심과 회피 경로를 정확히 포착한 특허 한 건</b>이 더 강할 수 있습니다.
+</div>
+
+<div class="warn">
+  <div class="warn-h">먼저, 출원번호와 특허권은 구분해야 합니다</div>
+  <div class="warn-b">
+    <p>특허권은 심사를 거쳐 설정등록되어야 발생합니다. 출원공개 후 일정한 요건 아래 보상금청구권이 문제 될 수 있지만, 이 권리도 설정등록 후 행사할 수 있습니다.</p>
+    <p>따라서 출원번호를 받았다는 이유만으로 곧바로 경쟁사의 제조·판매를 금지할 수는 없습니다.</p>
+  </div>
+</div>
+
+<h2>특허 1건의 힘은 ‘청구범위’에서 결정됩니다</h2>
+
+<p>특허의 보호범위를 정하는 것은 제품명이나 도면의 전체 모습이 아니라 등록특허공보의 <strong>청구범위</strong>입니다. 하나의 출원에도 여러 독립항과 종속항을 둘 수 있으므로, 특허 1건이라고 해서 반드시 하나의 구조만 보호하는 것은 아닙니다.</p>
+
+<p>반대로 제품의 핵심 원리는 넓은데 청구항이 특정 부품·수치·결합방식으로 지나치게 좁게 작성되었다면, 경쟁사는 그 부분을 다른 구성으로 바꾸어 문언상 권리범위를 벗어나려고 할 수 있습니다.</p>
+
+<div class="warn">
+  <div class="warn-h">간단한 예: A+B+C 특허와 A+B+D 제품</div>
+  <div class="warn-b">
+    <p>C가 청구항의 필수 구성이라면 이를 D로 바꾼 제품은 우선 문언상 차이가 문제 됩니다. 다만 D가 C와 실질적으로 같은 역할을 하는 경우에는 균등침해 가능성을 별도로 판단해야 합니다.</p>
+    <p>따라서 부품 하나가 다르다는 이유만으로 침해 여부를 단정할 수는 없습니다.</p>
+  </div>
+</div>
+
+<h2>특허를 여러 건 내기 전에, 첫 출원을 제대로 설계해야 합니다</h2>
+
+<p>특허의 개수를 늘리는 것보다 먼저 해야 할 일은 <strong>핵심 원리와 예상 가능한 변형을 최초 명세서에 충분히 담는 것</strong>입니다. 출원 후에는 최초 명세서나 도면에 없던 새로운 내용을 자유롭게 추가할 수 없기 때문입니다.</p>
+
+<ol class="steps">
+  <li><b>핵심 원리를 찾습니다</b>현재 시제품의 모양보다, 경쟁 제품에도 남을 수밖에 없는 기술적 구성을 파악합니다.</li>
+  <li><b>대체구성을 예상합니다</b>재료·배치·결합방식·공정순서를 바꾸어도 같은 효과가 나는지 검토합니다.</li>
+  <li><b>청구항을 단계적으로 구성합니다</b>핵심 원리를 담은 범위와 구체적인 실시형태에 가까운 범위를 함께 마련합니다.</li>
+</ol>
+
+<p>분할출원도 원출원의 최초 명세서나 도면에 기재된 범위 안에서만 가능합니다. 나중에 생각난 기술을 자유롭게 덧붙이는 제도가 아니므로, 첫 출원 전에 변형례까지 충분히 확인할 필요가 있습니다.</p>
+
+<h2>추가 출원은 ‘새로운 보호축’이 생겼을 때 검토합니다</h2>
+
+<p>추가 출원은 같은 설명을 반복하는 일이 아닙니다. 기본 구조와 제조공정·제어방법이 서로 다른 문제를 해결하거나, 최초 명세서 안의 여러 발명을 별도로 관리할 필요가 있거나, 출원 뒤 새로운 개량이 완성되는 등 별도의 권리로 관리할 실익이 생겼을 때 검토합니다.</p>
+
+<div class="tbl-cap">한 출원·분할출원·후속 출원의 역할</div>
+<table>
+  <thead>
+    <tr><th style="width:23%">선택지</th><th style="width:39%">적합한 상황</th><th>핵심 유의점</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>한 출원</td>
+      <td>하나의 핵심 원리와 그 변형들을 함께 보호하려는 경우</td>
+      <td>독립항·종속항을 단계적으로 구성하고 변형례를 명세서에 충분히 기재</td>
+    </tr>
+    <tr>
+      <td>분할출원</td>
+      <td>원출원에 기재된 여러 발명을 별도 권리로 심사·관리할 필요가 있는 경우</td>
+      <td>원출원의 최초 명세서·도면에 기재된 범위를 벗어날 수 없음</td>
+    </tr>
+    <tr>
+      <td>후속 출원</td>
+      <td>첫 출원 뒤 새롭게 완성된 개량기술을 보호하려는 경우</td>
+      <td>새롭게 추가된 기술의 출원 시점과 선행기술을 기준으로 별도 검토</td>
+    </tr>
+  </tbody>
+</table>
+<p class="tbl-note">제조공정이나 검사방법처럼 기술에 해당하더라도, 특허로 공개할지 영업비밀로 남길지는 별도의 판단입니다. 그 선택 기준은 다음 편에서 다룹니다.</p>
+
+<p>따라서 “여러 건이면 더 강하다”는 식의 단순한 결론은 피해야 합니다. 한 출원 안에서 청구항을 단계적으로 설계할지, 원출원의 기재를 분할할지, 새로 개발된 기술을 후속 출원할지는 서로 다른 선택입니다.</p>
+
+<h2>결론</h2>
+
+<p>특허 한 건으로 충분한지는 제품마다 다릅니다. 핵심은 <strong>첫 출원에 기술의 본질과 예상 가능한 변형을 충분히 담고, 별도의 기술적 과제나 후속 개량이 있을 때 추가 출원을 선택하는 것</strong>입니다.</p>
+
+<div class="series">
+  <div class="series-h">IP COLUMN SERIES &nbsp;·&nbsp; 신제품 보호</div>
+  <ol>
+    <li class="here"><b>특허 한 건이면 충분할까요?</b><span class="here-tag">본 편</span><br>특허의 청구범위와 첫 출원 설계</li>
+    <li><b>기술·외관·이름, 노하우는 무엇으로 지킬까요?</b><br>특허·디자인·상표·영업비밀의 선택 기준</li>
+  </ol>
+</div>
+
+<div class="close">
+  <h3>특허의 수보다 먼저, 첫 출원의 구조를 점검하세요</h3>
+  <p>비온은 신제품의 핵심 원리와 예상 가능한 회피 경로를 검토하고, 최초 명세서와 청구항 구조부터 분할·후속 출원까지 제품 로드맵에 맞게 설계합니다.</p>
+  <div class="cta">
+    <a class="btn-primary" href="https://beonip.com/#contact" target="_top">상담 문의하기</a>
+    <a class="btn-ghost" href="tel:0269520304">02-6952-0304</a>
+    <a class="btn-ghost" href="mailto:mail@beonip.com">mail@beonip.com</a>
+  </div>
+  <div class="firm">
+    <b>비온 특허법률사무소</b>&nbsp; BeON Patent &amp; Law Firm<br>
+    서울 영등포구 국제금융로8길 25, 6층 630호
+  </div>
+</div>
+<div class="more">
+  <span>함께 읽으면 좋은 글</span>
+  <a href="https://beonip.com/which-ip-right-to-choose.html" target="_top">기술·외관·이름, 노하우는 무엇으로 지킬까요? — 신제품 보호 (2)</a>
+  <a href="https://beonip.com/patent-after-disclosure.html" target="_top">제품 공개 후에도 특허출원 가능할까 — 공지예외적용 12개월</a>
+</div>
+
+<p class="disclaimer">본 칼럼은 일반적인 정보 제공을 목적으로 하며 개별 사안에 대한 법률 자문이 아닙니다. 필요한 출원 건수와 청구범위는 구체적인 기술내용, 선행기술, 제품 로드맵 및 출원·심사 경과에 따라 달라질 수 있으므로 개별 검토가 필요합니다.</p>
+
+</main>
+</div>
+</body>
+</html>
