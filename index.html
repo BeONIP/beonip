@@ -42,26 +42,172 @@ if(window.wcs) {
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "비온 특허법률사무소",
-  "alternateName": ["BeON Patent & Law Firm", "비온특허법률사무소", "비온특허"],
-  "url": "https://beonip.com",
-  "logo": "https://beonip.com/beon-logo-header.png",
-  "image": "https://beonip.com/beon-logo-header.png",
-  "telephone": "+82-2-6952-0304",
-  "email": "mail@beonip.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "국제금융로8길 25, 6층 630호",
-    "addressLocality": "영등포구",
-    "addressRegion": "서울",
-    "postalCode": "07332",
-    "addressCountry": "KR"
-  },
-  "areaServed": "KR",
-  "availableLanguage": ["ko", "en", "ja"],
-  "sameAs": [
-    "https://pf.kakao.com/_MixcfX"
+  "@graph": [
+    {
+      "@type": ["LegalService", "ProfessionalService"],
+      "@id": "https://beonip.com/#organization",
+      "name": "비온 특허법률사무소",
+      "alternateName": ["BeON Patent & Law Firm", "비온특허법률사무소", "비온특허", "비온 특허사무소"],
+      "description": "서울 여의도 소재 특허법률사무소. 인공지능·머신러닝, 반도체, 이차전지, 핀테크 등 전기·전자 분야와 바이오·화장품·제약 등 생명공학 분야의 특허·상표·디자인 출원 및 권리화를 수행합니다.",
+      "url": "https://beonip.com",
+      "logo": "https://beonip.com/beon-logo-header.png",
+      "image": "https://beonip.com/beon-logo-header.png",
+      "telephone": "+82-2-6952-0304",
+      "faxNumber": "+82-2-783-0032",
+      "email": "mail@beonip.com",
+      "foundingDate": "2026-07",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "국제금융로8길 25, 6층 630호",
+        "addressLocality": "영등포구",
+        "addressRegion": "서울",
+        "postalCode": "07332",
+        "addressCountry": "KR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.5203231,
+        "longitude": 126.9284866
+      },
+      "areaServed": "KR",
+      "availableLanguage": ["ko", "en", "ja"],
+      "knowsAbout": [
+        "특허출원",
+        "상표출원",
+        "디자인출원",
+        "인공지능 특허",
+        "머신러닝 특허",
+        "대규모 언어모델 특허",
+        "반도체 특허",
+        "이차전지 특허",
+        "핀테크 특허",
+        "플랫폼 비즈니스모델 특허",
+        "소프트웨어 특허",
+        "화장품 조성물 특허",
+        "제약 특허",
+        "바이오 특허",
+        "FTO 조사",
+        "회피설계",
+        "특허 무효자료조사",
+        "거절이유 대응",
+        "거절결정불복심판",
+        "해외출원",
+        "IP-R&D",
+        "정부지원사업 지식재산권 요건"
+      ],
+      "serviceType": [
+        "특허 출원 및 권리화",
+        "상표 출원 및 권리화",
+        "디자인 출원 및 권리화",
+        "중간사건 대응 (의견제출통지 대응)",
+        "특허 심판 및 분쟁 대응",
+        "FTO 조사 및 회피설계",
+        "선행기술조사 및 특허성 검토",
+        "해외출원 (PCT, 미국, 유럽, 일본, 중국)",
+        "IP 포트폴리오 전략 수립",
+        "창업기업 지식재산 자문 및 멘토링"
+      ],
+      "employee": [
+        { "@id": "https://beonip.com/#park-hyeonseo" },
+        { "@id": "https://beonip.com/#kim-byunggyu" }
+      ],
+      "sameAs": [
+        "https://pf.kakao.com/_MixcfX",
+        "https://map.naver.com/p/entry/place/2002142047",
+        "https://www.instagram.com/beon_ip",
+        "https://share.google/oxtO7gFAWeJeFUrrf"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://beonip.com/#park-hyeonseo",
+      "name": "박현서",
+      "alternateName": "Hyeon Seo Park",
+      "givenName": "현서",
+      "familyName": "박",
+      "jobTitle": "대표 변리사",
+      "description": "전기·전자 기반 AI·반도체·이차전지 특허 전문 변리사. 대기업 이차전지 출원·중간사건 전담 경험을 바탕으로 명세서 작성부터 심판까지 전 과정을 직접 수행합니다.",
+      "url": "https://beonip.com/#members",
+      "worksFor": { "@id": "https://beonip.com/#organization" },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "서울대학교",
+        "department": "전기·정보공학부"
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "professional license",
+        "name": "변리사 (Korean Patent Attorney)",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "대한변리사회"
+        }
+      },
+      "knowsAbout": [
+        "인공지능 및 머신러닝 (LLM 포함)",
+        "반도체 소자 및 공정",
+        "이차전지",
+        "컴퓨터 아키텍처",
+        "전기·전자",
+        "소프트웨어",
+        "핀테크",
+        "플랫폼 비즈니스모델"
+      ],
+      "knowsLanguage": ["ko", "en"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://beonip.com/#kim-byunggyu",
+      "name": "김병규",
+      "alternateName": "Byung Gyu Kim",
+      "givenName": "병규",
+      "familyName": "김",
+      "jobTitle": "대표 변리사",
+      "description": "분자생물학·생명공학 기반 바이오·화장품·제약 특허 전문 변리사. 아모레퍼시픽 연구원 경력을 바탕으로 연구자와 원활히 소통하며 기술 쟁점을 신속·정확하게 파악합니다.",
+      "url": "https://beonip.com/#members",
+      "worksFor": { "@id": "https://beonip.com/#organization" },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "도쿄대학 대학원",
+          "department": "정보생명과학"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "도쿄농공대학",
+          "department": "생명공학과"
+        }
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "professional license",
+        "name": "변리사 (Korean Patent Attorney)",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "대한변리사회"
+        }
+      },
+      "knowsAbout": [
+        "분자생물학",
+        "생명공학",
+        "화장품 조성물",
+        "제약",
+        "폴리펩타이드",
+        "항체",
+        "줄기세포",
+        "미생물",
+        "식품 조성물"
+      ],
+      "knowsLanguage": ["ko", "ja", "en"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://beonip.com/#website",
+      "url": "https://beonip.com",
+      "name": "비온 특허법률사무소",
+      "inLanguage": "ko",
+      "publisher": { "@id": "https://beonip.com/#organization" }
+    }
   ]
 }
 </script>
