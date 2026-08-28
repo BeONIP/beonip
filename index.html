@@ -396,6 +396,23 @@ nav.links a:hover::after{width:100%}
 .col-body p{margin:0;color:var(--slate);font-size:.95rem;line-height:1.7}
 .col-arrow{font-size:1.1rem;color:var(--mist);align-self:center;transition:transform .3s}
 .col-item:hover .col-arrow{transform:translateX(5px)}
+.col-item.is-hidden{display:none}
+/* 칼럼 페이지네이션 */
+.col-pager{display:flex;align-items:center;justify-content:center;gap:.45rem;
+  margin-top:2.2rem}
+.col-pager button{appearance:none;background:none;cursor:pointer;
+  min-width:2.3rem;height:2.3rem;padding:0 .5rem;
+  border:1px solid transparent;border-radius:0;
+  font-family:var(--serif-lt);font-size:1.02rem;line-height:1;
+  color:var(--slate-soft);transition:color .25s,border-color .25s}
+.col-pager button:hover{color:var(--navy);border-color:var(--hair)}
+.col-pager button[aria-current="true"]{color:var(--navy);border-color:var(--navy);font-weight:600}
+.col-pager button[disabled]{opacity:.28;cursor:default}
+.col-pager button[disabled]:hover{color:var(--slate-soft);border-color:transparent}
+.col-pager .pg-edge{font-family:var(--sans);font-size:.9rem}
+.col-pager .pg-count{margin-left:.5rem;font-family:var(--serif-lt);font-style:italic;
+  font-size:.9rem;color:var(--slate-soft)}
+@media(max-width:560px){.col-pager .pg-count{display:none}}
 .col-note{margin-top:2rem;font-size:.9rem;color:var(--slate-soft)}
 .col-badge{display:inline-block;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
   color:var(--mist);border:1px solid var(--hair);border-radius:2px;padding:.15rem .5rem;margin-left:.6rem;vertical-align:middle}
@@ -906,6 +923,8 @@ footer .fmeta a:hover{color:var(--ivory)}
 
     </div>
 
+    <nav class="col-pager reveal" id="colPager" aria-label="칼럼 목록 페이지" hidden></nav>
+
   </div>
 </section>
 <!-- ================= COLUMN MODAL ================= -->
@@ -1248,6 +1267,72 @@ document.querySelectorAll('[data-col]').forEach(b=>
 document.querySelectorAll('.modal').forEach(m=>{
   m.querySelectorAll('[data-close]').forEach(el=>el.addEventListener('click',()=>closeModal(m)));
 });
+
+/* ── 칼럼 페이지네이션 ────────────────────────────────
+   한 페이지 3편. 항목은 DOM에 그대로 두고 CSS로만 감추므로
+   검색엔진은 전체 칼럼 링크를 계속 읽는다.
+   PER_PAGE 값만 바꾸면 한 페이지 노출 수가 바뀐다. */
+(function(){
+  const PER_PAGE = 3;
+  const list  = document.querySelector('.columns');
+  const pager = document.getElementById('colPager');
+  if(!list || !pager) return;
+
+  const items = Array.from(list.querySelectorAll('.col-item'));
+  const pages = Math.ceil(items.length / PER_PAGE);
+  if(pages <= 1) return;           // 3편 이하면 페이저를 만들지 않는다
+  pager.hidden = false;
+
+  let current = 1;
+
+  function render(){
+    items.forEach((el,i)=>{
+      const onPage = Math.floor(i / PER_PAGE) + 1 === current;
+      el.classList.toggle('is-hidden', !onPage);
+    });
+
+    pager.innerHTML = '';
+
+    const prev = document.createElement('button');
+    prev.type='button'; prev.className='pg-edge'; prev.textContent='‹';
+    prev.setAttribute('aria-label','이전 페이지');
+    prev.disabled = current === 1;
+    prev.addEventListener('click',()=>go(current-1));
+    pager.appendChild(prev);
+
+    for(let n=1; n<=pages; n++){
+      const b = document.createElement('button');
+      b.type='button'; b.textContent = n;
+      b.setAttribute('aria-label', n + '페이지');
+      if(n === current) b.setAttribute('aria-current','true');
+      b.addEventListener('click',()=>go(n));
+      pager.appendChild(b);
+    }
+
+    const next = document.createElement('button');
+    next.type='button'; next.className='pg-edge'; next.textContent='›';
+    next.setAttribute('aria-label','다음 페이지');
+    next.disabled = current === pages;
+    next.addEventListener('click',()=>go(current+1));
+    pager.appendChild(next);
+
+    const count = document.createElement('span');
+    count.className='pg-count';
+    count.textContent = '전체 ' + items.length + '편';
+    pager.appendChild(count);
+  }
+
+  function go(n){
+    if(n < 1 || n > pages || n === current) return;
+    current = n;
+    render();
+    const head = document.querySelector('#column .section-head');
+    if(head) head.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+  render();
+})();
+
 addEventListener('keydown',e=>{
   if(e.key==='Escape'){const o=document.querySelector('.modal.open');if(o)closeModal(o);}
 });
