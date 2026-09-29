@@ -14,7 +14,7 @@
 <meta name="color-scheme" content="light only" />
 
 <title>BeON Patent &amp; Law Firm | Korean Patent &amp; Trademark Attorneys, Seoul</title>
-<meta name="description" content="A boutique IP firm in Yeouido, Seoul. BeON represents foreign applicants before KIPO and handles Korean and international patent, trademark and design matters. Every case is handled personally by a founding partner." />
+<meta name="description" content="A boutique IP firm in Yeouido, Seoul. BeON represents foreign applicants before the Ministry of Intellectual Property (MOIP, formerly KIPO) and handles Korean and international patent, trademark and design matters. Every case is handled personally by a founding partner." />
 
 <link rel="canonical" href="https://beonip.com/en/" />
 <link rel="alternate" hreflang="ko" href="https://beonip.com/" />
@@ -44,27 +44,166 @@ if(window.wcs) {
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "BeON Patent & Law Firm",
-  "alternateName": ["비온 특허법률사무소", "BeON IP", "비온특허"],
-  "url": "https://beonip.com/en/",
-  "logo": "https://beonip.com/beon-logo-header.png",
-  "image": "https://beonip.com/beon-logo-header.png",
-  "telephone": "+82-2-6952-0304",
-  "email": "mail@beonip.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Room 630, 25 Gukjegeumyung-ro 8-gil",
-    "addressLocality": "Yeongdeungpo-gu",
-    "addressRegion": "Seoul",
-    "postalCode": "07332",
-    "addressCountry": "KR"
-  },
-  "areaServed": ["KR", "Worldwide"],
-  "availableLanguage": ["ko", "en", "ja"],
-  "inLanguage": "en",
-  "sameAs": [
-    "https://pf.kakao.com/_MixcfX"
+  "@graph": [
+    {
+      "@type": ["LegalService", "ProfessionalService"],
+      "@id": "https://beonip.com/#organization",
+      "name": "BeON Patent & Law Firm",
+      "alternateName": ["비온 특허법률사무소", "ビオン特許法律事務所", "BeON IP", "비온특허"],
+      "description": "A boutique IP firm in Yeouido, Seoul. BeON acts as Korean counsel for overseas applicants and their foreign associates, handling patent, trademark and design matters before the Ministry of Intellectual Property (MOIP, formerly KIPO). Every case is handled personally by a founding partner.",
+      "url": "https://beonip.com/en/",
+      "logo": "https://beonip.com/beon-logo-header.png",
+      "image": "https://beonip.com/beon-logo-header.png",
+      "telephone": "+82-2-6952-0304",
+      "faxNumber": "+82-2-783-0032",
+      "email": "mail@beonip.com",
+      "foundingDate": "2026-07",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Room 630, Jutaek Geonseol Hoegwan Bldg., 25 Gukjegeumyung-ro 8-gil",
+        "addressLocality": "Yeongdeungpo-gu",
+        "addressRegion": "Seoul",
+        "postalCode": "07332",
+        "addressCountry": "KR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.5203231,
+        "longitude": 126.9284866
+      },
+      "areaServed": ["KR", "Worldwide"],
+      "availableLanguage": ["en", "ko", "ja"],
+      "knowsAbout": [
+        "Korean patent applications",
+        "Korean trademark applications",
+        "Korean design applications",
+        "Paris Convention priority filings in Korea",
+        "Korean national phase entry of PCT applications",
+        "Prosecution before the Ministry of Intellectual Property (MOIP)",
+        "Office action responses",
+        "Appeals against decisions of refusal",
+        "Invalidation trials",
+        "Scope confirmation trials",
+        "Prior art searching",
+        "Freedom-to-operate analysis",
+        "Artificial intelligence and machine learning patents",
+        "Semiconductor patents",
+        "Secondary battery patents",
+        "Fintech and business method patents",
+        "Cosmetic composition patents",
+        "Pharmaceutical and biotechnology patents"
+      ],
+      "serviceType": [
+        "Korean counsel for foreign applicants and associates",
+        "Korean patent prosecution and registration",
+        "Korean trademark and design prosecution",
+        "Office action responses before MOIP",
+        "Trials, appeals and dispute support",
+        "Prior art searching and freedom-to-operate analysis",
+        "International filings (PCT, US, EP, JP, CN)",
+        "Government IP and R&D programme support"
+      ],
+      "employee": [
+        { "@id": "https://beonip.com/#park-hyeonseo" },
+        { "@id": "https://beonip.com/#kim-byunggyu" }
+      ],
+      "sameAs": [
+        "https://pf.kakao.com/_MixcfX",
+        "https://map.naver.com/p/entry/place/2002142047",
+        "https://www.instagram.com/beon_ip",
+        "https://share.google/oxtO7gFAWeJeFUrrf"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://beonip.com/#park-hyeonseo",
+      "name": "Hyeon Seo Park",
+      "alternateName": ["박현서", "パク・ヒョンソ"],
+      "givenName": "Hyeon Seo",
+      "familyName": "Park",
+      "jobTitle": "Managing Partner",
+      "description": "Korean patent attorney practising in electrical and information engineering, AI and machine learning, semiconductors and secondary batteries. Sole charge of Korean and foreign filings and prosecution for a major Korean secondary-battery portfolio.",
+      "url": "https://beonip.com/en/#people",
+      "worksFor": { "@id": "https://beonip.com/#organization" },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Seoul National University",
+        "department": "Electrical and Information Engineering"
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "professional license",
+        "name": "Korean Patent Attorney",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Korean Patent Attorneys Association"
+        }
+      },
+      "knowsAbout": [
+        "Artificial intelligence and machine learning, including large language models",
+        "Semiconductor devices and processes",
+        "Secondary batteries",
+        "Computer architecture",
+        "Electrical and electronic engineering",
+        "Software",
+        "Fintech",
+        "Platform business methods"
+      ],
+      "knowsLanguage": ["ko", "en"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://beonip.com/#kim-byunggyu",
+      "name": "Byung Gyu Kim",
+      "alternateName": ["김병규", "キム・ビョンギュ"],
+      "givenName": "Byung Gyu",
+      "familyName": "Kim",
+      "jobTitle": "Managing Partner",
+      "description": "Korean patent attorney practising in molecular biology and biotechnology, cosmetics and pharmaceuticals. Graduate of the University of Tokyo with research experience at Amorepacific; works directly in Japanese on Japan-originating matters.",
+      "url": "https://beonip.com/en/#people",
+      "worksFor": { "@id": "https://beonip.com/#organization" },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "The University of Tokyo",
+          "department": "Information and Life Sciences"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Tokyo University of Agriculture and Technology",
+          "department": "Biotechnology"
+        }
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "professional license",
+        "name": "Korean Patent Attorney",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Korean Patent Attorneys Association"
+        }
+      },
+      "knowsAbout": [
+        "Molecular biology",
+        "Biotechnology",
+        "Cosmetic compositions",
+        "Pharmaceuticals",
+        "Polypeptides",
+        "Antibodies",
+        "Stem cells",
+        "Microorganisms",
+        "Food compositions"
+      ],
+      "knowsLanguage": ["ko", "ja", "en"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://beonip.com/en/#website",
+      "url": "https://beonip.com/en/",
+      "name": "BeON Patent & Law Firm",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://beonip.com/#organization" }
+    }
   ]
 }
 </script>
@@ -573,8 +712,8 @@ footer .fmeta a:hover{color:var(--ivory)}
       <div class="pcard reveal">
         <span class="idx">i.</span>
         <h3>Incoming &mdash; Korean Filings for Foreign Applicants</h3>
-        <p>We act as Korean counsel for overseas applicants and their foreign associates: Paris Convention filings, PCT national phase entry, prosecution before KIPO, and Korean trademark and design applications. One partner completed his undergraduate and graduate studies in Japan and works directly from Japanese-language originals, removing a translation layer on Japan-originating matters.</p>
-        <div class="tags">KIPO · PCT national phase · Japanese capability · Foreign associate support</div>
+        <p>We act as Korean counsel for overseas applicants and their foreign associates: Korean filings claiming Paris Convention priority, Korean national phase entry of PCT applications, prosecution before the Ministry of Intellectual Property (MOIP, formerly KIPO), and Korean trademark and design applications. One partner completed his undergraduate and graduate studies in Japan and reviews Japanese-language specifications and technical materials directly, corresponding in Japanese on Japan-originating matters.</p>
+        <div class="tags">MOIP · PCT national phase · Japanese capability · Foreign associate support</div>
       </div>
       <div class="pcard reveal">
         <span class="idx">ii.</span>
@@ -752,7 +891,7 @@ footer .fmeta a:hover{color:var(--ivory)}
       <div class="eyebrow">Access</div>
       <h2>Find us in<br>Yeouido, Seoul.</h2>
       <div class="info">
-        <div class="info-row"><div class="k">Address</div><div class="v">Room 630, 6F, 25 Gukjegeumyung-ro 8-gil<br>Yeongdeungpo-gu, Seoul 07332, Republic of Korea</div></div>
+        <div class="info-row"><div class="k">Address</div><div class="v">Room 630, 6F, Jutaek Geonseol Hoegwan Bldg. (주택건설회관)<br>25 Gukjegeumyung-ro 8-gil, Yeongdeungpo-gu<br>Seoul 07332, Republic of Korea</div></div>
         <div class="info-row"><div class="k">Parking</div><div class="v">No on-site parking<br>Nearest public lot: <a class="park-link" href="https://map.naver.com/p/search/%ED%98%B8%EC%84%B1%EB%B9%8C%EB%94%A9%EC%95%9E%20%EB%85%B8%EC%83%81%EA%B3%B5%EC%98%81%EC%A3%BC%EC%B0%A8%EC%9E%A5" target="_blank" rel="noopener">Hoseong Building on-street public parking</a><br><span class="park-note">Operated by Yeongdeungpo District · Rates and hours: +82 2-2650-1455</span></div></div>
       </div>
       <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=37.520317,126.928476" target="_blank" rel="noopener">View on Google Maps →</a>
@@ -807,7 +946,7 @@ footer .fmeta a:hover{color:var(--ivory)}
   </ul>
 
   <ul class="legal-meta">
-    <li><span class="legal-key">Address</span>Room 630, 25 Gukjegeumyung-ro 8-gil, Yeongdeungpo-gu, Seoul 07332, Republic of Korea</li>
+    <li><span class="legal-key">Address</span>Room 630, Jutaek Geonseol Hoegwan Bldg., 25 Gukjegeumyung-ro 8-gil, Yeongdeungpo-gu, Seoul 07332, Republic of Korea</li>
     <li><span class="legal-key">Tel</span><a href="tel:+82269520304">+82 2 6952 0304</a></li>
     <li><span class="legal-key">Email</span><a href="mailto:mail@beonip.com">mail@beonip.com</a></li>
   </ul>
