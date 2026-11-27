@@ -875,7 +875,122 @@ footer .fmeta a:hover{color:var(--ivory)}
       <p class="note">
         アイデアの段階でも構いません。ご相談内容を伺い、必要な検討の範囲と、費用・期間の目安をご案内します。
         日本の特許事務所・企業からのお問い合わせも歓迎します。日本語のままお送りください。</p>
-      <a href="#" class="btn" id="mailBtn">メールでお問い合わせ</a>
+      <style>
+/* ── お問い合わせフォーム ───────────────────────── */
+.cform{margin-top:1.6rem}
+.cform .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1rem}
+.cform .f-full{grid-column:1 / -1}
+.cform label{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--slate-soft);margin-bottom:.4rem}
+.cform label .req{color:#B4472F;margin-left:.2rem}
+.cform input,.cform select,.cform textarea{
+  width:100%;box-sizing:border-box;font-family:var(--sans);font-size:.95rem;color:var(--navy-deep);
+  background:#FFFDF9;border:1px solid var(--hair);border-radius:2px;padding:.72rem .85rem;
+  transition:border-color .2s,box-shadow .2s}
+.cform textarea{min-height:150px;resize:vertical;line-height:1.75}
+.cform input:focus,.cform select:focus,.cform textarea:focus{
+  outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(22,35,61,.07)}
+.cform input::placeholder,.cform textarea::placeholder{color:#AEABA2}
+.cform .hint{font-size:.78rem;color:var(--slate-soft);margin:.5rem 0 0;line-height:1.75}
+.cform .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consent{margin-top:1.2rem;border:1px solid var(--hair);border-radius:2px;background:var(--ivory-soft);padding:.95rem 1.05rem}
+.consent h4{margin:0 0 .55rem;font-size:.72rem;letter-spacing:.12em;color:var(--slate-soft);font-weight:600}
+.consent ul{margin:0;padding-left:1.05rem;font-size:.82rem;line-height:1.9;color:var(--slate)}
+.consent-check{display:flex;align-items:flex-start;gap:.55rem;margin-top:.85rem;font-size:.87rem;line-height:1.8;color:var(--navy-deep);cursor:pointer}
+.consent-check input{width:16px;height:16px;margin:.3rem 0 0;flex:0 0 auto;accent-color:var(--navy)}
+.cform .actions{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem;margin-top:1.35rem}
+.cform button.btn{font-family:var(--sans);cursor:pointer}
+.cform .btn[disabled]{opacity:.5;cursor:not-allowed;transform:none}
+.form-msg{margin-top:.95rem;font-size:.88rem;line-height:1.8;display:none}
+.form-msg.ok{display:block;color:#2F6B4F}
+.form-msg.err{display:block;color:#B4472F}
+.form-msg.wait{display:block;color:var(--slate)}
+@media(max-width:720px){.cform .fgrid{grid-template-columns:1fr}}
+</style>
+      <form class="cform" id="contactForm" novalidate>
+        <div class="fgrid">
+          <div>
+            <label for="cf-name">お名前または会社名 <span class="req">*</span></label>
+            <input id="cf-name" name="name" type="text" required autocomplete="name" placeholder="山田太郎 / 株式会社○○">
+          </div>
+          <div>
+            <label for="cf-phone">ご連絡先 <span class="req">*</span></label>
+            <input id="cf-phone" name="phone" type="tel" required autocomplete="tel" placeholder="090-0000-0000">
+          </div>
+          <div class="f-full">
+            <label for="cf-email">メールアドレス <span class="req">*</span></label>
+            <input id="cf-email" name="email" type="email" required autocomplete="email" placeholder="example@email.com">
+          </div>
+          <div class="f-full">
+            <label for="cf-topic">ご相談の分野</label>
+            <select id="cf-topic" name="topic">
+              <option>日本からの韓国出願</option>
+              <option>韓国特許</option>
+              <option>外国出願</option>
+              <option>商標・意匠</option>
+              <option>審判・紛争対応</option>
+              <option>政府支援事業・特許分析</option>
+              <option>まだ決まっていません</option>
+            </select>
+          </div>
+          <div class="f-full">
+            <label for="cf-message">お問い合わせ内容 <span class="req">*</span></label>
+            <textarea id="cf-message" name="message" required placeholder="どのような製品・技術・ブランドか、現在どの段階か、発売や公表のご予定があるかをお書き添えいただけますと、より具体的にご回答できます。日本語のままで結構です。"></textarea>
+            <p class="hint">発明の具体的な技術内容や図面・明細書は、このフォームにはご記入にならないでください。まずご返信を差し上げ、利害関係を確認したうえで、安全な方法でお預かりいたします。</p>
+          </div>
+        </div>
+
+        <div class="hp" aria-hidden="true">
+          <label>この欄は空欄のままにしてください<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <div class="consent">
+          <h4>個人情報の収集・利用への同意</h4>
+          <ul>
+            <li><b>収集する項目</b> — お名前または会社名、ご連絡先、メールアドレス、お問い合わせ内容</li>
+            <li><b>利用目的</b> — お問い合わせの確認とご返信、利害関係の確認</li>
+            <li><b>保有期間</b> — ご返信の完了後1年。ご依頼に至った場合は、関係法令の定める期間</li>
+            <li><b>拒否する権利</b> — ご同意を拒否いただけます。その場合、本フォームからのご返信は差し上げられませんが、メール・お電話・カカオトークでのお問い合わせは可能です。</li>
+          </ul>
+          <label class="consent-check">
+            <input type="checkbox" id="cf-agree" name="agree" required>
+            <span>上記を確認し、個人情報の収集・利用に同意します。 <a href="/privacy.html" target="_blank" rel="noopener">個人情報処理方針（韓国語）↗</a></span>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn" id="cf-submit">お問い合わせを送信</button>
+        </div>
+        <p class="form-msg" id="cf-out" role="status" aria-live="polite"></p>
+      </form>
+
+<script>
+(function(){
+  var ENDPOINT = "https://script.google.com/macros/s/AKfycbz9zC8TCU87TZHS5l87YaHnpaI4xhCJtT2RlNG-U9cob-_UVIfZAjYdIdx65Vb6cQL__w/exec";
+  var f = document.getElementById('contactForm');
+  if(!f) return;
+  var out = document.getElementById('cf-out');
+  var btn = document.getElementById('cf-submit');
+  function show(cls, txt){ out.className = 'form-msg ' + cls; out.textContent = txt; }
+  f.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if(f.website.value) return;
+    if(!f.checkValidity()){ f.reportValidity(); return; }
+    var fd = new FormData(f);
+    fd.append('page', window.location.href);
+    btn.disabled = true;
+    show('wait', '送信中です…');
+    fetch(ENDPOINT, { method:'POST', mode:'no-cors', body: new URLSearchParams(fd) })
+      .then(function(){
+        f.reset();
+        show('ok', '受け付けました。営業日基準で24時間以内にご返信いたします。');
+      })
+      .catch(function(){
+        show('err', '送信に失敗しました。お手数ですが mail@beonip.com までご連絡いただければ、すぐに確認いたします。');
+      })
+      .then(function(){ btn.disabled = false; });
+  });
+})();
+</script>
     </div>
     <div class="info reveal">
       <div class="info-row"><div class="k">事務所</div><div class="v">ビオン特許法律事務所 · <span class="beon">Be<span class="on">ON</span></span> Patent &amp; Law Firm</div></div>
@@ -1098,7 +1213,7 @@ addEventListener('keydown',e=>{
 /* mailto helper */
 const EMAIL="mail@beonip.com";  // change here and every mail link updates
 if(EMAIL){
-  document.getElementById('mailBtn').href="mailto:"+EMAIL+"?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%EF%BC%88beonip.com%EF%BC%89";
+  var mb=document.getElementById('mailBtn'); if(mb) mb.href="mailto:"+EMAIL+"?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%EF%BC%88beonip.com%EF%BC%89";
   document.querySelectorAll('[data-mail]').forEach(a=>{a.href="mailto:"+EMAIL;a.textContent=EMAIL;a.classList.remove('ph')});
 }
 </script>
