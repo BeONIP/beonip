@@ -915,7 +915,121 @@ footer .fmeta a:hover{color:var(--ivory)}
         An idea is enough to begin with. Tell us what you have and we will tell you what is realistically
         protectable, what it is likely to cost and how long it should take. Enquiries from foreign
         associates are welcome.</p>
-      <a href="#" class="btn" id="mailBtn">Email us</a>
+      <style>
+/* ── contact form ───────────────────────────────── */
+.cform{margin-top:1.6rem}
+.cform .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1rem}
+.cform .f-full{grid-column:1 / -1}
+.cform label{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--slate-soft);margin-bottom:.4rem}
+.cform label .req{color:#B4472F;margin-left:.2rem}
+.cform input,.cform select,.cform textarea{
+  width:100%;box-sizing:border-box;font-family:var(--sans);font-size:.95rem;color:var(--navy-deep);
+  background:#FFFDF9;border:1px solid var(--hair);border-radius:2px;padding:.72rem .85rem;
+  transition:border-color .2s,box-shadow .2s}
+.cform textarea{min-height:150px;resize:vertical;line-height:1.75}
+.cform input:focus,.cform select:focus,.cform textarea:focus{
+  outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(22,35,61,.07)}
+.cform input::placeholder,.cform textarea::placeholder{color:#AEABA2}
+.cform .hint{font-size:.78rem;color:var(--slate-soft);margin:.5rem 0 0;line-height:1.75}
+.cform .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consent{margin-top:1.2rem;border:1px solid var(--hair);border-radius:2px;background:var(--ivory-soft);padding:.95rem 1.05rem}
+.consent h4{margin:0 0 .55rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--slate-soft);font-weight:600}
+.consent ul{margin:0;padding-left:1.05rem;font-size:.82rem;line-height:1.85;color:var(--slate)}
+.consent-check{display:flex;align-items:flex-start;gap:.55rem;margin-top:.85rem;font-size:.87rem;line-height:1.7;color:var(--navy-deep);cursor:pointer}
+.consent-check input{width:16px;height:16px;margin:.3rem 0 0;flex:0 0 auto;accent-color:var(--navy)}
+.cform .actions{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem;margin-top:1.35rem}
+.cform button.btn{font-family:var(--sans);cursor:pointer}
+.cform .btn[disabled]{opacity:.5;cursor:not-allowed;transform:none}
+.form-msg{margin-top:.95rem;font-size:.88rem;line-height:1.75;display:none}
+.form-msg.ok{display:block;color:#2F6B4F}
+.form-msg.err{display:block;color:#B4472F}
+.form-msg.wait{display:block;color:var(--slate)}
+@media(max-width:720px){.cform .fgrid{grid-template-columns:1fr}}
+</style>
+      <form class="cform" id="contactForm" novalidate>
+        <div class="fgrid">
+          <div>
+            <label for="cf-name">Name or company <span class="req">*</span></label>
+            <input id="cf-name" name="name" type="text" required autocomplete="name" placeholder="Jane Doe / Acme Inc.">
+          </div>
+          <div>
+            <label for="cf-phone">Phone <span class="req">*</span></label>
+            <input id="cf-phone" name="phone" type="tel" required autocomplete="tel" placeholder="+82 10 0000 0000">
+          </div>
+          <div class="f-full">
+            <label for="cf-email">Email <span class="req">*</span></label>
+            <input id="cf-email" name="email" type="email" required autocomplete="email" placeholder="example@email.com">
+          </div>
+          <div class="f-full">
+            <label for="cf-topic">Area of inquiry</label>
+            <select id="cf-topic" name="topic">
+              <option>Korean Patents</option>
+              <option>International Filings</option>
+              <option>Trademarks &amp; Designs</option>
+              <option>Trials &amp; Litigation</option>
+              <option>Government Programs &amp; Patent Analytics</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="f-full">
+            <label for="cf-message">How can we help? <span class="req">*</span></label>
+            <textarea id="cf-message" name="message" required placeholder="Tell us what the product, technology or brand is, what stage you are at, and whether a launch or publication is already scheduled. The more context you give, the more useful our first reply will be."></textarea>
+            <p class="hint">Please do not put detailed technical content, drawings or draft specifications in this form. We will reply first, run a conflict check, and then arrange a secure channel.</p>
+          </div>
+        </div>
+
+        <div class="hp" aria-hidden="true">
+          <label>Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <div class="consent">
+          <h4>Consent to collection and use of personal information</h4>
+          <ul>
+            <li><b>What we collect</b> — your name or company name, phone number, email address, and the contents of your inquiry</li>
+            <li><b>Why</b> — to review and respond to your inquiry, and to run a conflict-of-interest check</li>
+            <li><b>How long</b> — one year after we reply. If the matter proceeds to a retainer, for the period required by applicable law</li>
+            <li><b>Your right to refuse</b> — you may decline. We will then be unable to reply through this form, but you are welcome to reach us by email, phone or KakaoTalk.</li>
+          </ul>
+          <label class="consent-check">
+            <input type="checkbox" id="cf-agree" name="agree" required>
+            <span>I have read the above and consent to the collection and use of my personal information. <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy (Korean) ↗</a></span>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn" id="cf-submit">Send inquiry</button>
+        </div>
+        <p class="form-msg" id="cf-out" role="status" aria-live="polite"></p>
+      </form>
+
+<script>
+(function(){
+  var ENDPOINT = "https://script.google.com/macros/s/AKfycbz9zC8TCU87TZHS5l87YaHnpaI4xhCJtT2RlNG-U9cob-_UVIfZAjYdIdx65Vb6cQL__w/exec";
+  var f = document.getElementById('contactForm');
+  if(!f) return;
+  var out = document.getElementById('cf-out');
+  var btn = document.getElementById('cf-submit');
+  function show(cls, txt){ out.className = 'form-msg ' + cls; out.textContent = txt; }
+  f.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if(f.website.value) return;
+    if(!f.checkValidity()){ f.reportValidity(); return; }
+    var fd = new FormData(f);
+    fd.append('page', window.location.href);
+    btn.disabled = true;
+    show('wait', 'Sending…');
+    fetch(ENDPOINT, { method:'POST', mode:'no-cors', body: new URLSearchParams(fd) })
+      .then(function(){
+        f.reset();
+        show('ok', 'Thank you — your inquiry has been received. We will reply within one business day.');
+      })
+      .catch(function(){
+        show('err', 'Something went wrong. Please email us at mail@beonip.com and we will pick it up right away.');
+      })
+      .then(function(){ btn.disabled = false; });
+  });
+})();
+</script>
     </div>
     <div class="info reveal">
       <div class="info-row"><div class="k">Firm</div><div class="v"><span class="beon">Be<span class="on">ON</span></span> Patent &amp; Law Firm · 비온 특허법률사무소</div></div>
@@ -1138,7 +1252,7 @@ addEventListener('keydown',e=>{
 /* mailto helper */
 const EMAIL="mail@beonip.com";  // change here and every mail link updates
 if(EMAIL){
-  document.getElementById('mailBtn').href="mailto:"+EMAIL+"?subject=Enquiry%20via%20beonip.com";
+  var mb=document.getElementById('mailBtn'); if(mb) mb.href="mailto:"+EMAIL+"?subject=Enquiry%20via%20beonip.com";
   document.querySelectorAll('[data-mail]').forEach(a=>{a.href="mailto:"+EMAIL;a.textContent=EMAIL;a.classList.remove('ph')});
 }
 </script>
