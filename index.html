@@ -1140,7 +1140,6 @@ footer .fmeta a:hover{color:var(--ivory)}
 
         <div class="actions">
           <button type="submit" class="btn" id="cf-submit">상담 요청 보내기</button>
-          <a href="#" class="btn ghost" id="mailBtn">메일로 보내기</a>
         </div>
         <p class="form-msg" id="cf-out" role="status" aria-live="polite"></p>
       </form>
@@ -1491,7 +1490,7 @@ addEventListener('keydown',e=>{
 /* placeholder mailto helper (updates once real email is filled) */
 const EMAIL="mail@beonip.com";  // ← 대표 메일 (다르면 이 값만 바꾸면 버튼·링크 자동 반영)
 if(EMAIL){
-  document.getElementById('mailBtn').href="mailto:"+EMAIL+"?subject=상담 요청";
+  var mb=document.getElementById('mailBtn'); if(mb) mb.href="mailto:"+EMAIL+"?subject=상담 요청";
   document.querySelectorAll('[data-mail]').forEach(a=>{a.href="mailto:"+EMAIL;a.textContent=EMAIL;a.classList.remove('ph')});
 }
 </script>
