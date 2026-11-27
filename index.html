@@ -1056,7 +1056,138 @@ footer .fmeta a:hover{color:var(--ivory)}
       <p class="note">
         아이디어 단계여도 괜찮습니다. 아이디어만 있어도 방향을 함께 잡아드립니다.
         부담 없이 아래로 편하게 연락 주세요.</p>
-      <a href="#" class="btn" id="mailBtn">이메일로 상담 요청</a>
+      <style>
+/* ── 상담 문의 폼 ───────────────────────────────── */
+.cform{margin-top:1.6rem}
+.cform .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1rem}
+.cform .f-full{grid-column:1 / -1}
+.cform label{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--slate-soft);margin-bottom:.4rem}
+.cform label .req{color:#B4472F;margin-left:.2rem}
+.cform input,.cform select,.cform textarea{
+  width:100%;box-sizing:border-box;font-family:var(--sans);font-size:.95rem;color:var(--navy-deep);
+  background:#FFFDF9;border:1px solid var(--hair);border-radius:2px;padding:.72rem .85rem;
+  transition:border-color .2s,box-shadow .2s}
+.cform textarea{min-height:150px;resize:vertical;line-height:1.75}
+.cform input:focus,.cform select:focus,.cform textarea:focus{
+  outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(22,35,61,.07)}
+.cform input::placeholder,.cform textarea::placeholder{color:#AEABA2}
+.cform .hint{font-size:.78rem;color:var(--slate-soft);margin:.5rem 0 0;line-height:1.75}
+.cform .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consent{margin-top:1.2rem;border:1px solid var(--hair);border-radius:2px;background:var(--ivory-soft);padding:.95rem 1.05rem}
+.consent h4{margin:0 0 .55rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--slate-soft);font-weight:600}
+.consent ul{margin:0;padding-left:1.05rem;font-size:.82rem;line-height:1.85;color:var(--slate)}
+.consent-check{display:flex;align-items:flex-start;gap:.55rem;margin-top:.85rem;font-size:.87rem;line-height:1.7;color:var(--navy-deep);cursor:pointer}
+.consent-check input{width:16px;height:16px;margin:.3rem 0 0;flex:0 0 auto;accent-color:var(--navy)}
+.cform .actions{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem;margin-top:1.35rem}
+.cform button.btn{font-family:var(--sans);cursor:pointer}
+.cform .btn[disabled]{opacity:.5;cursor:not-allowed;transform:none}
+.form-msg{margin-top:.95rem;font-size:.88rem;line-height:1.75;display:none}
+.form-msg.ok{display:block;color:#2F6B4F}
+.form-msg.err{display:block;color:#B4472F}
+.form-msg.wait{display:block;color:var(--slate)}
+@media(max-width:720px){.cform .fgrid{grid-template-columns:1fr}}
+</style>
+
+      <form class="cform" id="contactForm" novalidate>
+        <div class="fgrid">
+          <div>
+            <label for="cf-name">성함 또는 회사명 <span class="req">*</span></label>
+            <input id="cf-name" name="name" type="text" required autocomplete="name" placeholder="홍길동 또는 (주)비온">
+          </div>
+          <div>
+            <label for="cf-phone">연락처 <span class="req">*</span></label>
+            <input id="cf-phone" name="phone" type="tel" required autocomplete="tel" placeholder="010-0000-0000">
+          </div>
+          <div class="f-full">
+            <label for="cf-email">이메일 <span class="req">*</span></label>
+            <input id="cf-email" name="email" type="email" required autocomplete="email" placeholder="example@email.com">
+          </div>
+          <div class="f-full">
+            <label for="cf-topic">문의 분야</label>
+            <select id="cf-topic" name="topic">
+              <option>특허 · 실용신안</option>
+              <option>상표</option>
+              <option>디자인</option>
+              <option>심판 · 분쟁</option>
+              <option>해외출원</option>
+              <option>아직 모르겠습니다</option>
+            </select>
+          </div>
+          <div class="f-full">
+            <label for="cf-message">문의 내용 <span class="req">*</span></label>
+            <textarea id="cf-message" name="message" required placeholder="어떤 제품·기술·브랜드인지, 지금 어느 단계인지, 출시나 공개 예정일이 있는지 알려주시면 더 정확한 답변이 가능합니다."></textarea>
+            <p class="hint">발명의 구체적인 기술 내용이나 도면·명세서는 이 양식에 적지 말아 주세요. 먼저 회신드린 뒤 이해관계를 확인하고, 안전한 경로로 받겠습니다.</p>
+          </div>
+        </div>
+
+        <div class="hp" aria-hidden="true">
+          <label>이 칸은 비워두세요<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <div class="consent">
+          <h4>개인정보 수집 · 이용 동의</h4>
+          <ul>
+            <li><b>수집 항목</b> — 성함 또는 회사명, 연락처, 이메일, 문의 내용</li>
+            <li><b>이용 목적</b> — 문의 확인과 상담 회신, 이해관계 확인</li>
+            <li><b>보유 기간</b> — 회신 완료 후 1년. 수임으로 이어진 경우 관계 법령이 정한 기간</li>
+            <li><b>거부 권리</b> — 동의를 거부하실 수 있습니다. 다만 이 경우 양식을 통한 회신이 어려우며, 메일·전화·카카오톡으로는 문의하실 수 있습니다.</li>
+          </ul>
+          <label class="consent-check">
+            <input type="checkbox" id="cf-agree" name="agree" required>
+            <span>위 내용을 확인했으며 개인정보 수집 · 이용에 동의합니다. <a href="privacy.html" target="_blank" rel="noopener">개인정보처리방침 ↗</a></span>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn" id="cf-submit">상담 요청 보내기</button>
+          <a href="#" class="btn ghost" id="mailBtn">메일로 보내기</a>
+        </div>
+        <p class="form-msg" id="cf-out" role="status" aria-live="polite"></p>
+      </form>
+
+<script>
+(function(){
+  var ENDPOINT = "";
+  var NL = String.fromCharCode(10);
+  var f = document.getElementById('contactForm');
+  if(!f) return;
+  var out = document.getElementById('cf-out');
+  var btn = document.getElementById('cf-submit');
+  function show(cls, txt){ out.className = 'form-msg ' + cls; out.textContent = txt; }
+  f.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if(f.website.value) return;
+    if(!f.checkValidity()){ f.reportValidity(); return; }
+    var fd = new FormData(f);
+    if(!ENDPOINT){
+      var body = [
+        '성함 또는 회사명: ' + fd.get('name'),
+        '연락처: ' + fd.get('phone'),
+        '이메일: ' + fd.get('email'),
+        '문의 분야: ' + fd.get('topic'),
+        '', fd.get('message')
+      ].join(NL);
+      window.location.href = 'mailto:mail@beonip.com'
+        + '?subject=' + encodeURIComponent('[홈페이지 상담 요청] ' + fd.get('name'))
+        + '&body=' + encodeURIComponent(body);
+      show('ok', '메일 작성 창을 열었습니다. 전송까지 눌러 주세요. 창이 열리지 않으면 mail@beonip.com 으로 보내주세요.');
+      return;
+    }
+    fd.append('page', window.location.href);
+    btn.disabled = true;
+    show('wait', '보내는 중입니다…');
+    fetch(ENDPOINT, { method:'POST', mode:'no-cors', body: new URLSearchParams(fd) })
+      .then(function(){
+        f.reset();
+        show('ok', '접수되었습니다. 영업일 기준 24시간 이내에 회신드리겠습니다.');
+      })
+      .catch(function(){
+        show('err', '전송에 실패했습니다. 번거로우시겠지만 mail@beonip.com 으로 보내주시면 바로 확인하겠습니다.');
+      })
+      .then(function(){ btn.disabled = false; });
+  });
+})();
+</script>
     </div>
     <div class="info reveal">
       <div class="info-row"><div class="k">Firm</div><div class="v">비온 특허법률사무소 · <span class="beon">Be<span class="on">ON</span></span> Patent &amp; Law Firm</div></div>
